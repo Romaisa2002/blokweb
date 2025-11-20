@@ -197,7 +197,7 @@ Contrast van tekst over afbeeldingen ook goed
   ### de hele pagina: 
   <img src="readme-images/faciliteiten breakdownschets.jpg" width="375px" alt="breakdown van de hele pagina faciliteiten">
 
-  ### dynamisch deel (bijv menu): 
+  ### de hele pagina: 
   <img src="readme-images/membership breakdown shets.jpg" width="375px" alt="breakdown van de hele pagina memberschips">
 </details>
 
