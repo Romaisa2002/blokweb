@@ -1,0 +1,399 @@
+@font-face {
+    font-family: "integral";
+    src: url("../fonts/integral-bold.woff2");
+}
+
+@font-face {
+    font-family: "Manifold";
+    src: url("../fonts/manifold-regular.woff2");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Manifold";
+    src: url("../fonts/manifold-demibold.woff2");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Manifold";
+    src: url("../fonts/manifold-bold.woff2");
+    font-weight: 700;
+}
+
+/* BASIS */
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+/* VARIABELEN */
+:root {
+	color-scheme: light dark;
+
+    --color-text: light-dark(#ffffff,#ffffff);
+    --color-text2: light-dark(#000000, #000000);
+    --color-bg: light-dark(#000000, #000000);
+    --color-button: light-dark(#ffffff,#ffffff);
+
+    --color-footer-bg: light-dark(#ffffff,#ffffff);
+    --color-footer-text: light-dark(#000000, #000000);
+
+    --color-accent: light-dark(#ff0140,#ff0140);
+    --color-muted: light-dark(#c6c5c5, #c6c5c5);
+    --color-border: light-dark(#ffffff,#ffffff);
+}
+
+/* BODY */
+body {
+    font-family: "Manifold";
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+}
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg);
+    padding: 1.8em;
+    z-index: 10;
+    gap: 1em;
+}
+
+header img {
+    width: 8em;
+}
+
+header > a:first-of-type {
+    margin-right: auto;
+}
+
+header > a:nth-of-type(2) {
+    background: var(--color-accent);
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 1em 1.4em;
+    font-size: .7em;
+    letter-spacing: .05em;
+}
+header > a:nth-of-type(2):hover {
+    background: transparent;
+    color: var(--color-accent);
+    border: 0.1em solid var(--color-accent);
+}
+
+header > button {
+    background: none;
+    border: none;
+}
+
+header button img {
+    width: 3em;
+}
+
+header button img:hover{
+	cursor: pointer;
+}
+header button img :active{
+	transform: scale(0.9);
+}
+
+/* NAV MOBIEL */
+header nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0.17em;
+    gap: 0.5em;
+
+    position: fixed;
+    inset: 0;
+    translate: 100% 0;
+    transition: .4s ease;
+    background: var(--color-bg);
+}
+
+header nav > img {
+    width: 10em;
+    padding: 1em 1em 0;
+}
+
+header nav.is-open {
+    translate: 0 0;
+}
+
+header nav > button {
+    position: absolute;
+    top: 1.7em;
+    right: 1.6em;
+    background: none;
+    border: none;
+}
+
+header nav > button img {
+    width: 2em;
+}
+
+header nav > select {
+    width: 5em;
+    background: transparent;
+    color: var(--color-text);
+    border: none;
+    padding: .6em;
+    font-family: "Manifold";
+    font-size: .9em;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-family: "Manifold";
+    font-weight: 400;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    padding: 0.8em;
+    gap: 1em;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+/* nav CTA-knoppen */
+header nav > ul:last-of-type > li:first-of-type > a {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1em solid var(--color-border);
+    height: 3em;
+    color: var(--color-text);
+    text-decoration: none;
+    font-family: "Manifold";
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+}
+
+header nav > ul:last-of-type > li:nth-of-type(2) > a {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    background: var(--color-accent);
+    color: var(--color-text);
+    text-decoration: none;
+    font-family: "Manifold";
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+}
+
+/* EERSTE-IMAGE + TEKST */
+main > section:first-of-type {
+    position: relative;      
+}
+
+
+main > section:first-of-type > img {
+    object-fit: cover;
+    width: 100%;
+    height: 25em;
+}
+
+main > section:first-of-type > div {
+    position: absolute;
+    top: 5em;                     
+    left: 0;
+    right: 0;
+    padding: 0 1em;
+    color: var(--color-text);
+}
+
+/* h1 op de foto */
+main > section:first-of-type h1 {
+	color: var(--color-text);
+	font-family: "integral";
+    font-size: 2em;
+	padding: 0 0 0 0.5em;
+}
+/* p op de foto */
+main > section:first-of-type p {
+	padding: 0 1em 1em 0.8em;
+}
+
+/* CTA-knoppen op de memberships hero */
+main > section:first-of-type ul {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 3em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    list-style: none;
+    margin: 0;
+    padding: 0 2.5em; 
+}
+
+/* algemene stijl van de knoppen */
+main > section:first-of-type ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Manifold";
+    font-weight: 600;
+    letter-spacing: .12em;
+    font-size: .9em;
+
+    padding: 0.8em;
+    border-radius: 0;          
+    border: .12em solid transparent;
+}
+
+/* JOIN NOW –  */
+main > section:first-of-type ul li:first-of-type a {
+    background: var(--color-accent);
+    color: var(--color-text);
+}
+
+/* FREE TRIAL */
+main > section:first-of-type ul li:nth-of-type(2) a {
+    background: transparent;
+    color: var(--color-button);
+    border-color: var(--color-border);
+}
+
+@media (min-width: 100em) {
+    header > button {
+        display: none;
+    }
+
+    header nav button {
+        display: none;
+    }
+}
+
+/* TWEEDE SECTION – "Flexibel of vast, jij kiest je commitment." */
+main > section:nth-of-type(2) {
+    padding: 5em 1.5em 4em;
+    text-align: center;         
+}
+
+/* Titel */
+main > section:nth-of-type(2) h2 {
+    font-family: "integral";
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+/* Paragraaf */
+main > section:nth-of-type(2) p {
+    font-family: "Manifold";
+    font-size: 0.8em;
+    line-height: 1.6;        
+}
+
+/* MEMBERSHIP KAARTEN – DERDE SECTION IN MAIN */
+main > section:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    max-width: 100%;
+    padding: 3em 1em 4em;
+}
+
+/* algemene kaart-styling */
+main > section:nth-of-type(3) article {
+    background-color: #232323;
+    color: #ffffff;
+    padding: 2.5em 3em;
+}
+
+/* titel in de kaart (h3) */
+main > section:nth-of-type(3) article h3 {
+    font-family: "integral";
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 0.06em;
+}
+  
+/* FOOTER */
+footer {
+    background-color: var(--color-footer-bg);
+    color: var(--color-footer-text);
+}
+
+footer > img {
+    display: flex;
+    max-width: 100%;
+    padding: 7em 0em 4em 1em;
+}
+
+footer ul {
+    display: grid;
+    list-style: none;
+    padding: 0em 0em 1em 1em;
+    gap: 1.5em;
+}
+
+footer section:first-of-type ul a {
+    display: grid;
+    text-decoration: none;
+    font-family: "integral";
+    color: var(--color-footer-text);
+    font-size: 1em;
+}
+
+footer > a:first-of-type {
+    display: flex;
+    gap: 0.2em;
+    padding: 0 0 1em 1em;  
+    align-items: center;
+}
+
+footer section:nth-of-type(2) ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.2em 0 1em;
+	
+}
+
+footer h4 {
+    font-family: "Manifold";
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 0; 
+}
+
+footer section ul a {
+    text-decoration: none;
+    color: var(--color-footer-text);
+    font-family: "Manifold";
+}
+
+footer section:last-of-type ul {
+    font-family: "Manifold";
+    text-transform: uppercase;
+    font-size: 0.75em;
+    padding: 0 0 0 1em;
+    gap: 0.9em;
+	
+}
+
+footer section:last-of-type ul a {
+    color: var(--color-muted);
+}
+
+footer p {
+    color: var(--color-muted);
+    font-size: 0.75em;
+    padding: 1em 0em 4em 1em;
+}

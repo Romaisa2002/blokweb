@@ -209,31 +209,38 @@ Contrast van tekst over afbeeldingen ook goed
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+ Ik heb de scrolbar in mijn carousal gekregen en beter dan de Trainmore website want hier hoef je alleen met je muis te bewegen en in de echte moet je klikkend schuivene
+<img src="readme-images/scrolbar.png" width="375px" alt="scrolbar in de carousal">
 
+Ik heb ook de hamburger menu icoon kleiner gekregen dat ging ook super goed 
+<img src="readme-images/hamburgermenu knop.png" width="375px" alt="Hamburger menu knop">
+
+Verder het gebruiken van Article snapte ik nog niet zo heel goed maar dat komt verder nog in mijn andere pagina's.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
+  Suzanne Moolenburgh:
+  - Vraag over form met button + input + popover element
+  - Footer tabbladen
+  - Aria-labels
+  - Herkleuren SVG iconen met CSS
+ 
+ Romaisa Zaman:
+  - Hamburger menu icoon kleiner krijgen en zonder achtergrond
+  -  Welke sections kan ik het beste gebruiken
+  - Javascript naar css en html beter begrijpen
+  - Aria labels
+  - Article
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Ik heb geleerd hoe je met grid columns het beste kan werken
+  - Ook hoe ik een scrolbar krijg bij de carousal
+  - We hebben het gehad over svg elementen een ander kleur geven ik vond dat erg interessant.
 
 </details>
-
-
-
 
 
 ## Voortgang 2 (week 3)
@@ -242,17 +249,23 @@ Contrast van tekst over afbeeldingen ook goed
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+ Het gebruiken van displayflex en justify content space between ging goed. Ik wist helemaal niet dat dit ook kon.
+ <img src="readme-images/iconen space between.png" width="375px" alt="iconen space between">
+
+ Het werken met position relative en absolute vind ik nog lastig want als ik het scherm kleiner maakt blijft te tekst niet op de afbeelding maar gaat er over heen buiten de afbeelding.
+<img src="readme-images/position relative en absolute.png" width="375px" alt="relative en absolute">
+
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
+  Suzanne Moolenburgh:
+  1.  Aria labels op data & time elementen
+  2.  Hulp bij scroll footer
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Romaisa Zaman
+  1. Position relative en absolute op plaatjes goed responsive maken
+  2. Foto goed schalen en schaduw erop toevoegen
 
 
   ### Verslag van meeting
