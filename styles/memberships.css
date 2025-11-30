@@ -35,10 +35,12 @@
 
     --color-footer-bg: light-dark(#ffffff,#ffffff);
     --color-footer-text: light-dark(#000000, #000000);
+    --color-background-grey:light-dark(#161616, #161616);
 
     --color-accent: light-dark(#ff0140,#ff0140);
     --color-muted: light-dark(#c6c5c5, #c6c5c5);
     --color-border: light-dark(#ffffff,#ffffff);
+
 }
 
 /* BODY */
@@ -146,15 +148,14 @@ header nav > select {
 }
 
 header nav ul {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: 1em;
     list-style: none;
     font-family: "Manifold";
     font-weight: 400;
     font-size: 1.1em;
     text-transform: uppercase;
     padding: 0.8em;
-    gap: 1em;
 }
 
 header nav a {
@@ -191,24 +192,15 @@ header nav > ul:last-of-type > li:nth-of-type(2) > a {
     letter-spacing: 0.05em;
 }
 
-/* EERSTE-IMAGE + TEKST */
 main > section:first-of-type {
-    position: relative;      
-}
+    position: relative;
+    padding: 4em 1em 6em 1em;
 
-
-main > section:first-of-type > img {
-    object-fit: cover;
-    width: 100%;
-    height: 25em;
-}
-
-main > section:first-of-type > div {
-    position: absolute;
-    top: 5em;                     
-    left: 0;
-    right: 0;
-    padding: 0 1em;
+    background-image:
+        linear-gradient(to bottom, rgba(30, 30, 30, 0.479), rgba(0, 0, 0, 0.937)),
+        url("/images/student-membership-trainmore-secondary-hero-mobile.webp"); /* gebruik jouw hero-afbeelding */
+    background-size: cover;
+    background-position: center;
     color: var(--color-text);
 }
 
@@ -217,47 +209,37 @@ main > section:first-of-type h1 {
 	color: var(--color-text);
 	font-family: "integral";
     font-size: 2em;
-	padding: 0 0 0 0.5em;
-}
-/* p op de foto */
-main > section:first-of-type p {
-	padding: 0 1em 1em 0.8em;
 }
 
-/* CTA-knoppen op de memberships hero */
+/* CTA-knoppen op de memberships */
 main > section:first-of-type ul {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 3em;
 
     display: flex;
     flex-direction: column;
     gap: 1em;
     list-style: none;
     margin: 0;
-    padding: 0 2.5em; 
+    padding: 1em 1.5em 1em 1em; 
 }
 
 /* algemene stijl van de knoppen */
 main > section:first-of-type ul li a {
-    display: flex;
+    display:flex;
     align-items: center;
     justify-content: center;
-
+    height: 3em;
+    color: var(--color-text);
     text-decoration: none;
-    text-transform: uppercase;
     font-family: "Manifold";
-    font-weight: 600;
-    letter-spacing: .12em;
-    font-size: .9em;
-
-    padding: 0.8em;
-    border-radius: 0;          
-    border: .12em solid transparent;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
 }
 
-/* JOIN NOW –  */
+/* JOIN NOW */
 main > section:first-of-type ul li:first-of-type a {
     background: var(--color-accent);
     color: var(--color-text);
@@ -265,7 +247,7 @@ main > section:first-of-type ul li:first-of-type a {
 
 /* FREE TRIAL */
 main > section:first-of-type ul li:nth-of-type(2) a {
-    background: transparent;
+    border: 0.1em solid var(--color-border);
     color: var(--color-button);
     border-color: var(--color-border);
 }
@@ -280,40 +262,36 @@ main > section:first-of-type ul li:nth-of-type(2) a {
     }
 }
 
-/* TWEEDE SECTION – "Flexibel of vast, jij kiest je commitment." */
-main > section:nth-of-type(2) {
-    padding: 5em 1.5em 4em;
-    text-align: center;         
-}
-
 /* Titel */
-main > section:nth-of-type(2) h2 {
+main > section:nth-of-type(2) > h2 {
     font-family: "integral";
     text-transform: uppercase;
-    line-height: 1.2;
+    letter-spacing: .06em;
+    padding:2em 1em 0em 0.5em;
 }
 
 /* Paragraaf */
-main > section:nth-of-type(2) p {
+main > section:nth-of-type(2) > p {
     font-family: "Manifold";
-    font-size: 0.8em;
-    line-height: 1.6;        
+    font-size: 0.9em;
+    line-height: 1.6em;
+    padding: 0em 0em 0em 1em;
 }
 
-/* MEMBERSHIP KAARTEN – DERDE SECTION IN MAIN */
+
+/* MEMBERSHIP KAARTEN DERDE SECTION IN MAIN */
 main > section:nth-of-type(3) {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5em;
-    max-width: 100%;
-    padding: 3em 1em 4em;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    padding: 2em 1em 2em;
 }
 
 /* algemene kaart-styling */
 main > section:nth-of-type(3) article {
-    background-color: #232323;
+    background:var( --color-background-grey);
     color: #ffffff;
-    padding: 2.5em 3em;
+    padding: 2em;
 }
 
 /* titel in de kaart (h3) */
@@ -323,7 +301,123 @@ main > section:nth-of-type(3) article h3 {
     font-size: 1em;
     letter-spacing: 0.06em;
 }
-  
+main section:nth-of-type(3) article p{
+    font-size: 0.7em;
+}
+main > section:nth-of-type(3) > a {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: var(--color-accent);
+    color: var(--color-text);
+    padding:1.2em;
+    text-decoration: none;
+    font-size: 0.8em;
+
+}
+/* GRID LAYOUT VOOR MEMBERSHIP KAARTEN OP BREEDERE SCHERMEN */
+@media (min-width: 34em) { 
+    main > section:nth-of-type(3) {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    }
+}
+
+/* 4 KAARTEN NAAST ELKAAR */
+@media (min-width: 60em) {  
+    main > section:nth-of-type(3) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* HELE SECTION "Bereken je korting"  */
+main > section:last-of-type {  
+    padding: 1em 1.5em;
+    background:var( --color-background-grey);
+
+}
+main > section:nth-of-type(4) > h2 {
+    font-family: "integral";
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+main > section:nth-of-type(4) > p {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+/* Pijlen + nummer */
+main > section:last-of-type > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+main > section:last-of-type > div > button {
+    background: none;
+    border: none;
+    font-size: 1.6em;
+    color: var(--color-button);
+    cursor: pointer;
+}
+
+/* het getal "1" tussen de pijlen */
+main > section:last-of-type > div > p {
+    font-family: "integral";
+    font-size: 2.5em;
+    margin:0;
+    padding:0.5em 0em 0.5em 0em;
+}
+
+/* "Workouts per week" */
+main > section:last-of-type > h3 {
+    text-align: center;
+    font-family: "Manifold";
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 2em;
+    padding:1em 1em 1em 1em;
+    margin:0;
+    
+}
+
+/* grote roze prijs: €4,-*/
+main > section:last-of-type > p:nth-of-type(2) {
+    font-family: "integral";
+    font-size: 4em;
+    color: var(--color-accent);
+    text-align: center;
+    margin:0;
+}
+
+/* "Korting per 4 weken."*/
+main > section:last-of-type > p:nth-of-type(3) {
+    text-align: center;
+    font-family: "Manifold";
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+/* CTA "Ontdek meer" */
+main > section:last-of-type > a {
+    display: flex;
+    justify-content: center;
+    padding: 1em 2em;
+    text-align: center;
+
+    border: 0.1em solid var(--color-text);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Manifold";
+    font-size: 0.85em;
+    color: var(--color-text);
+}
+
+main > section:last-of-type > a:hover {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+}
+
 /* FOOTER */
 footer {
     background-color: var(--color-footer-bg);
@@ -359,12 +453,13 @@ footer > a:first-of-type {
 }
 
 footer section:nth-of-type(2) ul {
-    display: flex;
+    display: grid;
     justify-content: space-between;
+    grid-template-columns: repeat(5, 2.5em);
+    gap: 1em;
     align-items: center;
-    padding: 0 1.2em 0 1em;
-	
 }
+
 
 footer h4 {
     font-family: "Manifold";

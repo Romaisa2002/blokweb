@@ -271,10 +271,9 @@ Verder het gebruiken van Article snapte ik nog niet zo heel goed maar dat komt v
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Ik heb van de image een background image ervan gemaakt zodat de tekst op het plaatje blijft en er niet overheen gaat. 
+  - Ook heb ik dan een linear gradient gebruikt om de afbeelding een schaduw te geven op het plaatje. 
+  - Ik heb de vakjes van mijn carousal kleiner gemaakt zodat je op kleiner scherm nog kan zien dat je kan scrollen. 
 
 </details>
 
