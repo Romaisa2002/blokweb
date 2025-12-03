@@ -16,3 +16,4 @@ function SluitMenu(){
   deNav.classList.remove("is-open");
 }
 
+
