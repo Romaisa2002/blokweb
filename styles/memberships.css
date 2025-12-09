@@ -1,0 +1,632 @@
+/* =========================
+   SECTION 1 MEMBERSHIPS 
+   ========================= */
+
+   /* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-size */
+   /* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-position */
+main > section:first-of-type {
+    position: relative;
+    padding: 4em 1em 6em 1em;
+    background-image:
+        linear-gradient(to top,var(--gradient-top),var(--gradient-bottom)),
+        url("../images/student-membership-trainmore-secondary-hero-mobile.webp");
+    background-size: cover;
+    background-position: center;
+    color: var(--color-text);
+}
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp */
+/* titel */
+main > section:first-of-type h1 {
+    color: var(--color-text1);
+    font-family: "integral";
+    font-size: clamp(2em, 5vw, 6em);
+}
+
+/* tekst */
+main > section:first-of-type p {
+    font-size: clamp(0.9em, 1.2vw, 0.5em);
+    color: var(--color-text1);
+}
+
+/* knoppenlijst */
+main > section:first-of-type ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    list-style: none;
+    margin: 0;
+    padding: 1em 0em 0em 0em; 
+}
+
+/* basisstijl knoppen */
+main > section:first-of-type ul li a {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    text-decoration: none;
+    font-family: "Manifold";
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+}
+
+/* JOIN NOW */
+main > section:first-of-type ul li:first-of-type a {
+    background: var(--color-accent-red);
+    color: var(--color-text1);
+}
+main > section:first-of-type ul li:first-of-type a:hover{
+    color: var(--color-text);
+    background: var(--color-text2);
+    border: 0.1em solid var(--color-border);
+}
+
+main > section:first-of-type ul li:first-of-type a:active{
+    transform: scale(0.95);
+}
+
+/* FREE TRIAL */
+main > section:first-of-type ul li:nth-of-type(2) a {
+    border: 0.1em solid var(--color-border);
+    color: var(--color-text1);
+}
+
+main > section:first-of-type ul li:nth-of-type(2) a:hover{
+    background: var(--color-text2);
+    color: var(--color-text);
+}
+
+main > section:first-of-type ul li:nth-of-type(2) a:active{
+    transform: scale(0.95);
+}
+
+/* knoppenblok */
+@media (min-width: 34em) {
+    main > section:first-of-type ul li a {
+        width: 10em;      
+        padding: 1em;  
+    }
+
+    main > section:first-of-type ul {
+        flex-direction: row;    
+    }
+
+    main > section:first-of-type p {
+        width:40%;
+        font-size: clamp(1em, 1.2vw, 1.1em);
+    }
+}
+
+/* =========================
+   SECTION 2 UITLEG TEKST
+   ========================= */
+main > section:nth-of-type(2) > h2 {
+    font-family: "integral";
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    padding:2em 1em 0em 0.5em;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+main > section:nth-of-type(2) > p {
+    font-family: "Manifold";
+    font-size: 0.9em;
+    line-height: 1.6em;
+    padding: 0em 1em 0em 1em;
+    text-align: center;
+}
+
+@media (min-width: 30em) { 
+    main > section:nth-of-type(2) > h2 {
+        text-align: center;
+        font-size: clamp(2.3em, 1.2vw, 1.1em);
+    }
+
+    main > section:nth-of-type(2) > p {
+        text-align: center;
+        font-size: clamp(1em, 1.2vw, 1.1em);
+    }
+}
+
+/* =========================
+   SECTION 3 – MEMBERSHIP KAARTEN
+   ========================= */
+main > section:nth-of-type(3) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    padding: 2em 1em 2em;
+}
+
+/* losse kaart */
+main > section:nth-of-type(3) article {
+    background:var(--color-background-grey);
+    padding: 2em;
+    position: relative;    
+}
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/translateX */
+/* label / strong */
+main > section:nth-of-type(3) article strong {
+    position: absolute;
+    left: 50%;
+    bottom: 4.8em;    
+    transform: translateX(-50%);
+    font-family: "integral";
+    font-size: 0.60em;
+    text-transform: uppercase;
+    color: var(--color-text1);
+}
+
+/* streepje */
+main > section:nth-of-type(3) article > img{
+    width: 100%;     
+    height: 2em;    
+}
+
+/* titel */
+main > section:nth-of-type(3) article h3 {
+    font-family: "integral";
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 0.06em;
+    color: var(--color-text1);
+}
+
+/* tekst in kaart */
+main section:nth-of-type(3) article p{
+    font-size: 0.7em;
+    color: var(--color-text1);
+}
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid-column */
+/* JOIN NOW onder kaarten */
+main > section:nth-of-type(3) > a {
+    grid-column: 1 / -1;    
+    justify-self: center;             
+    text-align: center;
+    background: var(--color-accent-red);
+    color: var(--color-text1);
+    padding:1em 4em;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+main > section:nth-of-type(3) > a:hover{
+    background: var(--color-text);
+    color: var(--color-text2);
+}
+
+main > section:nth-of-type(3) > a:active{
+    transform: scale(0.95);
+}
+
+/* grid 2 kolommen (tablet) */
+@media (min-width: 30em) { 
+    main > section:nth-of-type(3) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* grid 4 kolommen (desktop) */
+@media (min-width: 55em) {  
+    main > section:nth-of-type(3) {
+        grid-template-columns: repeat(4, minmax(0, 16rem));
+        justify-content: center;
+    }
+
+    main > section:nth-of-type(3) article {
+        padding: 2em;
+    }
+}
+
+/* =========================
+   SECTION 4 – KORTING BLOK
+   ========================= */
+main > section:nth-of-type(4) {  
+    background: var(--color-background-pink);
+    scrollbar-color: var(--color-scroll-red) var(--color-scroll-white);
+    padding: 2em 1em 3em; 
+    text-align: center;  
+    color: var(--color-text);
+    position: relative;
+}
+
+/* titel korting */
+main > section:nth-of-type(4) > h2 {
+    font-family: "integral";
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--color-text);
+    font-size: 2em;
+}
+
+/* horizontale lijst */
+main > section:nth-of-type(4) ul {
+    list-style: none; 
+    display: flex; 
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    padding: 0; 
+    gap:5em;
+}
+
+/* item */
+main > section:nth-of-type(4) li{
+    text-align: center;
+    width: 100%;
+    flex-shrink: 0;
+    scroll-snap-align: center;      
+}
+
+/* nummer bovenaan */
+main > section:nth-of-type(4) ul li > strong {           
+    font-family: "integral";  
+    font-size: 3em;
+}
+
+/* button variant  */
+main > section:nth-of-type(4) li > button {
+    font-size: 2.5em;              
+    color: var(--color-text);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+main > section:nth-of-type(4) li > button:hover {
+    color: var(--color-accent-red);
+}
+
+main > section:nth-of-type(4) li > button:active {
+    transform: scale(0.9);
+}
+
+/* titel per card */
+main > section:nth-of-type(4) li > h3 {
+    font-size: 2em;
+    font-family: "Manifold";
+    font-weight: 400;
+    text-transform: uppercase; 
+}
+
+/* groot kortingsbedrag */
+main > section:nth-of-type(4) li > p:first-of-type {
+    font-size: 8em;
+    font-family:"timberwolf";
+    font-weight: 400;
+    margin:0;
+    color: var(--color-accent-red);
+}
+
+/* tekst onder bedrag */
+main > section:nth-of-type(4) li > p:nth-of-type(2) {
+    font-size: 1.5em;
+    font-family: "Manifold";
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-text);
+}
+
+/* CTA onder blok */
+main > section:nth-of-type(4) > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    font-family: "Manifold";
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    border: 0.1em solid var(--color-border);
+    color: var(--color-text);
+}
+
+main > section:nth-of-type(4) > a:hover {
+    background: var(--color-text);
+    color: var(--color-text2);
+}
+
+main > section:nth-of-type(4) > a:active {
+    transform: scale(0.97);
+}
+
+/* iets breder scherm */
+@media (min-width: 45em) { 
+    main > section:nth-of-type(4) > a {
+        display: inline-flex;   
+        align-items: center;
+        justify-content: center;
+        padding:1em 5em;
+    }
+}
+
+/* desktop layout korting */
+@media (min-width: 60em) {
+
+    main > section:nth-of-type(4) {
+        padding:3em;
+    }
+
+    main > section:nth-of-type(4) > article {
+      display: flex;
+      align-items: flex-start;             
+    }
+
+    main > section:nth-of-type(4) > h2 {
+        font-size: clamp(3em, 1.2vw, 1.1em);
+        text-align: left;
+    }
+
+    main > section:nth-of-type(4) > article > p {
+        font-size: clamp(1em, 1.2vw, 1.1em);
+        text-align: left;
+    }
+
+    main > section:nth-of-type(4) > article > h3 {
+        text-align: center;
+    }
+
+    main > section:nth-of-type(4) > article > ul {
+        display: flex;
+        overflow-x: auto;      
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        overscroll-behavior-x: contain;
+        anchor-name: --korting-carousel;
+    }
+
+    main > section:nth-of-type(4) > article > ul > li {      
+        scroll-snap-align: center;
+        width: 20em;
+    }
+
+    main > section:nth-of-type(4) > a {
+        display: flex;
+        justify-self: left;
+        position: absolute;
+        bottom: 23em;
+        padding:1.5em 3em;
+        border: 0.1em solid var(--color-border);
+        color: var(--color-text);
+    }
+
+    main > section:nth-of-type(4) > article > ul::scroll-button(*) {
+        position: absolute;
+        position-anchor: --korting-carousel;
+        position-area: block-end center;
+        appearance: none;
+        border: none;
+        background: transparent;
+        width: 2em;
+        aspect-ratio: 1;
+        border-radius: 999px;
+        color: var(--color-text);
+        cursor: pointer;
+        font-size: 1.6em;
+    }
+
+    main > section:nth-of-type(4) > article > ul::scroll-button(right) {
+        content: "→";
+        justify-self: flex-end;
+    }
+
+    main > section:nth-of-type(4) > article > ul::scroll-button(left) {
+        content: "←";
+        justify-self:flex-start;
+    }
+
+    main > section:nth-of-type(4) > article > ul::scroll-button(*):hover {
+        background: var(--color-scroll-red);
+    }
+
+    main > section:nth-of-type(4) > article > ul::scroll-button(*):active {
+        transform: scale(0.95);
+    }
+
+    main > section:nth-of-type(4) > article > ul::scroll-button(*):disabled {
+        cursor: default;
+        color: var(--color-muted);   
+    }
+}  
+
+/* =========================
+   SECTION 5 PILAT3S / CLUBS
+   ========================= */
+
+/* titel "Vind je rust" */
+main > section:nth-of-type(5) h2 {
+    font-family: "integral";
+    padding: 1em;
+    margin: 0;
+}
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display */
+/* span rondom PILAT3S */
+main > section:nth-of-type(5) h2 span {
+    position: relative;
+    display: inline-block;
+}
+
+/* rode streep */
+main > section:nth-of-type(5) h2 span img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height:100%;
+    bottom: -0.4em;        
+    width: 100%;          
+    transform: rotate(-5deg);
+    z-index: -1;
+}
+
+/* link per club */
+main > section:nth-of-type(5) > a {
+    display: block;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+/* kaart per club */
+main > section:nth-of-type(5) > a > article {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 2em;
+    border-bottom: 0.08em solid var(--color-border-white);
+}
+
+main > section:nth-of-type(5) > a > article:hover {
+    border-bottom-color: var(--color-text); 
+    cursor: pointer;
+    transform: translateY(-0.15em);
+}
+
+main > section:nth-of-type(5) > a > article:active {
+    transform: scale(0.99);
+}
+
+/* label RED/BLACK label */
+main > section:nth-of-type(5) > a > article > p:first-of-type {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    margin: 0;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding:0.5em 0.5em 0.5em 0em;
+    color: var(--color-accent-red);
+}
+
+/* clubtitel */
+main > section:nth-of-type(5) > a > article > h3 {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    margin: 0;
+    font-family: "integral";
+    padding:0em 0.5em 0.5em 0em;
+}
+
+/* adres */
+main > section:nth-of-type(5) > a > article > p:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 3;
+    margin: 0;
+    font-size: 0.8em;
+}
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-wrap */
+/* prijsvak */
+main > section:nth-of-type(5) > a > article > div {
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    column-gap: 1em;
+}
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-basis */
+/* "Vanaf" */
+main > section:nth-of-type(5) > a > article > div > p:first-of-type {
+    flex-basis: 100%;
+    text-align: right;
+    margin: 0;
+    font-size: 0.75em;
+}
+
+/* oude prijs */
+main > section:nth-of-type(5) > a > article > div > p:nth-of-type(2) {
+    color: var(--color-muted);
+    text-decoration: line-through;
+    margin: 0;
+    padding:0.30em 0em 0em 0em;
+}
+
+/* nieuwe prijs */
+main > section:nth-of-type(5) > a > article > div > p:nth-of-type(3) {
+    font-family: "integral";
+    margin: 0;
+    font-size: 1.4em;
+}
+
+/* pijl rechts (mobiel) */
+main > section:nth-of-type(5) > a > article > svg {
+    grid-column: 3;
+    grid-row: 3;
+    width: 1em;
+    justify-self: end;
+    align-self: center;
+}
+
+main > section:nth-of-type(5) > a > article > svg path {
+    stroke: var(--color-text);
+}
+
+/* JOIN NOW label in kaart*/
+main > section:nth-of-type(5) > a > article > span {
+    display: none;
+}
+
+/* SECTION 5 – grotere schermen */
+@media (min-width: 48em) {
+
+    main > section:nth-of-type(5) > a > article > svg {
+        display: none;
+    }
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display */
+
+    main > section:nth-of-type(5) > a > article > span {
+        display: block;
+        grid-column: 3;
+        grid-row: 1 / 4;
+        align-self: center;
+        justify-self: end;
+        background: var(--color-accent-red);
+        color: var(--color-text1);
+        padding: 1em 1.4em;
+        font-family: "Manifold";
+        font-size: 0.8em;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    main > section:nth-of-type(5) > a > article > span:hover {
+        background: var(--color-text);
+        color: var(--color-text2);
+        transform: translateY(-0.15em);
+    }
+
+    main > section:nth-of-type(5) > a > article > span:active {
+        transform: scale(0.95);
+    }
+
+    main > section:nth-of-type(5) > h2 {
+        font-size: clamp(1.6em, 3vw, 3.5em);
+    }
+
+    main > section:nth-of-type(5) article h3 {
+        font-size: clamp(1em, 1.8vw, 2em);
+    }
+
+    main > section:nth-of-type(5) article > p:nth-of-type(2) {
+        font-size: clamp(0.8em, 1.3vw, 1.1em);
+    }
+
+    main > section:nth-of-type(5) article div p:first-of-type {
+        font-size: clamp(0.75em, 1.2vw, 1em);
+    }
+    
+    main > section:nth-of-type(5) article div p:nth-of-type(2) {
+        font-size: clamp(0.9em, 1.4vw, 1.2em);
+        padding:0.2em 0em 0em 0em;
+    }
+
+    main > section:nth-of-type(5) article div p:nth-of-type(3) {
+        font-size: clamp(1.4em, 2.2vw, 2em);
+        font-family: "integral";
+    }
+}
+
+@media (min-width: 56em) {
+    main > section:nth-of-type(5) {
+        padding:10em;
+    }
+}
