@@ -259,6 +259,7 @@ Verder het gebruiken van Article snapte ik nog niet zo heel goed maar dat komt v
 
   ### Agenda voor meeting
   samen met je groepje opstellen
+
   Suzanne Moolenburgh:
   1.  Aria labels op data & time elementen
   2.  Hulp bij scroll footer
@@ -278,20 +279,22 @@ Verder het gebruiken van Article snapte ik nog niet zo heel goed maar dat komt v
 </details>
 
 
-
-
-
 ## Toegankelijkheidstest 2/2 (week 4)
 
 <details>
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is)
+
+  Tijdens het testen had ik eigenlijk meer dingen die ik moest verbeteren dan dat het goed was. 
+
+  Wat wel goed ging is dat ik wel een H1 heb en de Trainmore pagina heeft dat niet. Ik had minder errors bij de validatie test dan de echte Trainmore Website. Ook heb ik de button element echt voor buttons gebruikt en niet waar een a hoort 
+
+  Wat ik nog moest verbeteren is de Alt een beter naam geven bij de afbeeldingen. Wat niet in de Trainmore website zit maar wat ik wel ga doen is een skip heading maken. Verder wat ik nog moet verbeteren is een aria label overal aan teovoegen dat het niet alleen 'ontdek meer' voorleest. 
+  
 
 </details>
-
-
 
 
 
@@ -303,28 +306,40 @@ Verder het gebruiken van Article snapte ik nog niet zo heel goed maar dat komt v
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
+  carousal maken ging goed bij mij alleen de knoppen toevoegen ging lastig 
 
+  <img src="readme-images/Carousal.png" width="375px" alt="carousal">
+
+ <img src="readme-images/stukje code carousal.png" width="375px" alt="carousal code">
+
+ Het maken van de knoppen en label required werken was lastig. Ik had de html code goed alleen de css code voor dat vond ik erg lastig. De knoppen begreep ik totaal niet. 
+
+  <img src="readme-images/label required.png" width="375px" alt="label required
+  ">
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Suzanne Moolenburgh:
+  1. Mijn agenda voor morgen:
+  2. Feedback aria labels
+  3. Vraag bronvermelding
+
+  Romaisa Zaman
+  1. Requirement rood krijgen 
+  2. tekst op de svg maken
+  3. Knoppen maken met css 
+
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Ik heb geleerd hoe ik de required label met css kan maken. 
+  - ik heb geleerd hoe je knoppen maakt met css. 
+  - De meeting ging heel goed doordat ik uitleg kreeg van Sanne. 
+
 
 </details>
-
-
 
 
 
@@ -362,8 +377,116 @@ Verder het gebruiken van Article snapte ik nog niet zo heel goed maar dat komt v
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. Faciliteiten html en css bronnen:
+  https://trainmore.com/nl-NL/club-faciliteiten/
+
+https://www.google.com/search?sca_esv=bdfa73f17f6789a5&udm=2&sxsrf=AE3TifP9wjY4t3oVTq_k76fZQH0g0WK2Pg:1765225502079&q=trainmore+logo&spell=1&sa=X&ved=2ahUKEwjAzv-36a6RAxUW9wIHHXdAHv8QBSgAegQICRAB&biw=1365&bih=677&dpr=2#sv=CAMSVhoyKhBlLVNyQnhPT01VMFVvSTFNMg5TckJ4T09NVTBVb0kxTToOaDM0WlF0R09HY1ZYZE0gBCocCgZtb3NhaWMSEGUtU3JCeE9PTVUwVW9JMU0YADABGAcgvJnm2wcwAkoKCAIQAhgCIAIoAg
+
+https://nikitahl.github.io/svg-2-code/
+
+https://codepen.io/Romaisa-Zaman/pen/jEqLoMj
+
+https://www.svgrepo.com/svg/524262/arrow-right?edit=true
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/list-style
+
+https://www.w3schools.com/tags/tag_select.asp
+
+https://codepen.io/shooft/pen/vEGQEbg
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-image
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid-auto-flow
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overflow-x
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scroll-snap-type
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scroll-snap-align
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/align-items
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/justify-content
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-wrap
+
+https://chrome.dev/carousel-configurator/
+
+https://developer.chrome.com/blog/carousels-with-css?hl=nl
+
+2. Membership html en css bronnen:
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/span
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/div
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-size
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-position
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/translateX
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid-column
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-wrap
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-basis
+
+3. basis css bronnen:
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/span
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/div
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-size
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-position
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/translateX
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid-column
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-wrap
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-basis
+
+https://codepen.io/Romaisa-Zaman/pen/azNyOeG
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/z-index
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:first-of-type
+
+https://www.w3schools.com/cssref/sel_nth-last-of-type.php
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:nth-last-child
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/scale
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-direction
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/translate
+
+https://codepen.io/Romaisa-Zaman/pen/ByKJjXd
+
+https://codepen.io/Romaisa-Zaman/pen/xbVmjMe?editors=1100
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts
+
+https://www.w3schools.com/cssref/pr_grid-template-columns.php
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid-template-columns
+
 
 </details>

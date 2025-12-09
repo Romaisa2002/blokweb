@@ -1,4 +1,7 @@
 // JavaScript Document
+
+// in de klas de opdracht gemaakt 
+// https://codepen.io/Romaisa-Zaman/pen/jEqLoMj
 console.log("hi");
 
 const OpenMenuButton = document.querySelector("header > button");
@@ -15,5 +18,3 @@ function OpenMenu(){
 function SluitMenu(){
   deNav.classList.remove("is-open");
 }
-
-

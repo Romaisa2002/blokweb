@@ -1,314 +1,66 @@
-@font-face {
-    font-family: "integral";
-    src: url("../fonts/integral-bold.woff2");
-}
+/* =========================
+   MAIN – SECTION 1 (introblok bovenaan)
+   ========================= */
 
-@font-face {
-    font-family: "Manifold";
-    src: url("../fonts/manifold-regular.woff2");
-    font-weight: 400;
-}
-@font-face {
-    font-family: "Manifold";
-    src: url("../fonts/manifold-demibold.woff2");
-    font-weight: 600;
-}
-@font-face {
-    font-family: "Manifold";
-    src: url("../fonts/manifold-bold.woff2");
-    font-weight: 700;
-}
-
-/* BASIS */
-*, *::after, *::before {
-    box-sizing: border-box;
-}
-
-/* VARIABELEN */
-:root {
-	color-scheme: light dark;
-
-    --color-text: light-dark(#ffffff,#ffffff);
-    --color-text2: light-dark(#000000, #000000);
-    --color-bg: light-dark(#000000, #000000);
-    --color-button: light-dark(#ffffff,#ffffff);
-
-    --color-footer-bg: light-dark(#ffffff,#ffffff);
-    --color-footer-text: light-dark(#000000, #000000);
-    --color-background-grey:light-dark(#484848, #484848);
-
-    --color-accent: light-dark(#ff0140,#ff0140);
-    --color-muted: light-dark(#c6c5c5, #c6c5c5);
-    --color-border: white;
-}
-
-/* BODY */
-body {
-    font-family: "Manifold";
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    margin: 0;
-    padding: 0;
-}
-
-h2 {
-    font-family: "integral";
-    padding:0em 0em 0em 0.5em;
-    font-size: clamp(1.6em, 3vw, 4em);
-}
-
-/* HEADER */
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;  
-    position: sticky;
-    top: 0;
-    background-color: var(--color-bg);
-    padding: 1em;
-    z-index: 10;
-}
-
-
-header img {
-    width: 8em;
-}
-
-header > a:nth-of-type(2) {
-    background: var(--color-accent);
-    color: var(--color-text);
-    text-decoration: none;
-    padding: 1em 1.4em;
-    font-size: .7em;
-    letter-spacing: .05em;
-}
-
-header > a:nth-of-type(2):hover {
-    background: var(--color-text);
-    color: var(--color-text2);
-}
-
-header > button {
-    background: none;
-    border: none;
-    order:2;
-}
-
-header button img {
-    width: 3em;
-}
-
-header button img:hover{
-	cursor: pointer;
-}
-header button img :active{
-	transform: scale(0.9);
-}
-
-/* NAV MOBIEL */
-header nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-
-    position: fixed;
-    inset: 0;
-    translate: 100% 0;
-    transition: .4s ease;
-    background: var(--color-bg);
-}
-
-header nav > img {
-    width: 10em;
-    padding: 1em 1em 0;
-}
-
-header nav.is-open {
-    translate: 0 0;
-}
-
-header nav > button {
-    position: absolute;
-    top: 1.7em;
-    right: 1.6em;
-    background: none;
-    border: none;
-}
-
-header nav > button img {
-    width: 2em;
-}
-
-header > a:first-of-type {
-    margin-right:auto;
-}
-
-header nav > select {
-    width: 5em;
-    background: transparent;
-    color: var(--color-text);
-    border: none;
-    padding: .6em;
-    font-family: "Manifold";
-    font-size: .9em;
-}
-
-header nav ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    font-family: "Manifold";
-    font-weight: 400;
-    font-size: 1.1em;
-    text-transform: uppercase;
-    padding: 0.8em;
-    gap: 1.5em;
-}
-
-header nav a {
-    text-decoration: none;
-    color: var(--color-text);
-}
-
-/* nav CTA-knoppen */
-header nav > ul:last-of-type > li:first-of-type > a {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    border: 0.1em solid var(--color-border);
-    height: 3em;
-    color: var(--color-text);
-    text-decoration: none;
-    font-family: "Manifold";
-    text-transform: uppercase;
-    font-size: 0.8em;
-    letter-spacing: 0.05em;
-}
-
-header nav > ul:last-of-type > li:nth-of-type(2) > a {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    height: 3em;
-    background: var(--color-accent);
-    color: var(--color-text);
-    text-decoration: none;
-    font-family: "Manifold";
-    text-transform: uppercase;
-    font-size: 0.8em;
-    letter-spacing: 0.05em;
-}
-
-@media (min-width: 54em) {
-
-    header {
-        padding:1.5em;
-    }
-
-    header > button {
-        display: none;
-    }
-    header nav button {
-        display: none;
-    }
-        header nav {
-            position: static;
-            translate: 0 0;
-            display: flex;
-            align-items: center;  
-            flex-direction: row;
-            font-size: 0.9em;
-        }
-    
-        header nav ul {
-            display: flex;
-            flex-direction: row;
-            align-items: center;  
-            padding: 1em;           
-            gap: 1.5em;           
-        }
-
-    header nav > img {
-        display: none;
-    }
-
-    header nav ul li a {
-        font-size: 0.8em;
-    }
-
-    header > a:nth-of-type(2) {
-        display: none;
-    }
-
-    header nav > ul:last-of-type > li:first-of-type > a {
-      padding:1.7em;
-    }
-
-    /* JOIN NOW button */
-    header nav > ul:last-of-type > li:nth-of-type(2) > a {
-        padding: 1.8em;
-    }
-
-    header img {
-        max-width: 100%;
-    }
-
-    header nav ul li a {
-        font-size: clamp(0.8em, 1.2vw, 0.5em);
-    }
-
-    /* FREE TRIAL & JOIN NOW knoppen */
-    header nav > ul:last-of-type > li a {
-        font-size: clamp(0.7em, 1vw, 1.2em);
-    }
-    
-}
-
-/* SECTION (section 1) */
+/* Bron: over background img https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-image 
+en hulp gehad van de studenten assistent*/
 main > section:first-of-type {
     position: relative;
-	background-image: 
-	linear-gradient(to top, rgba(0, 0, 0, 0.962), rgba(203, 203, 203, 0)),
-	url("/images/services-trainmore-secondary-hero-desktop.webp");
-	background-size: cover;
-    padding:1em 0em 6em 1em;
+    background-image: linear-gradient(
+        to top,
+        var(--gradient-top),
+        var(--gradient-bottom)), url("../images/services-trainmore-secondary-hero-desktop.webp");
+    background-size: cover;
+    padding: 1em 0em 6em 1em;
 }
 
+/* SECTION 1 – hoofdtitel */
 main > section:first-of-type h1 {
-    color: var(--color-text);
+    color: var(--color-text1);
     font-family: "integral";
     padding: 1em 0 0 0;
     font-size: clamp(2em, 5vw, 6em);
 }
 
-/* h2 */
+/* SECTION 1 – subtitel (h2) */
 main > section:first-of-type h2 {
-    color: var(--color-text);
+    color: var(--color-text1);
     font-family: "Manifold";
     font-weight: 200;
     text-transform: uppercase;
     font-size: clamp(1em, 2.5vw, 1.3em);
     letter-spacing: .12em;
-    padding:0;
+    padding: 0;
 }
 
-/* p tekst ook laten schalen */
+/* SECTION 1 tekst */
 main > section:first-of-type p {
     font-size: clamp(0.9em, 1.2vw, 1.2em);
+    color: var(--color-text1);
 }
 
+/* SECTION 1 grotere schermen: tekst smaller */
 @media (min-width: 54em) {
-
     main > section:first-of-type p {
         padding: 0em 1em 4em 0em;
-        font-size: clamp(1em, 1vw,);
         width: 50%;
-
     }
-
 }
 
+/* =========================
+   MAIN SECTION 2 (wellness cards)
+   ========================= */
+main > section:nth-of-type(2) > h2 {
+    font-family: "integral";
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    padding: 1.5em 1em 0em 0.5em;
+}
+
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid-auto-flow */
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overflow-x */
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scroll-snap-type */
+/* horizontale lijst met kaarten */
 main > section:nth-of-type(2) > ul {
     display: grid;
     grid-auto-flow: column;
@@ -317,16 +69,17 @@ main > section:nth-of-type(2) > ul {
     list-style: none;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scrollbar-color: #ff0000 #b4b4b4;
+    scrollbar-color: var(--color-scroll-red) var(--color-scroll-white);
 }
-
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scroll-snap-align */
+/* individuele kaart */
 main > section:nth-of-type(2) > ul > li {
     position: relative;
     scroll-snap-align: start;
     width: 20em;
     height: 25em;
 }
-
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/object-fit */
 /* kaart-afbeelding */
 main > section:nth-of-type(2) > ul > li > img {
     position: absolute;
@@ -334,11 +87,10 @@ main > section:nth-of-type(2) > ul > li > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1;
-	padding: 0em 0em 0em 1em;
+    padding: 0em 0em 0em 1em;
 }
 
-/* kaart-titel */
+/* kaarttitel */
 main > section:nth-of-type(2) > ul > li > h3 {
     position: absolute;
     bottom: 3.5em;
@@ -346,19 +98,18 @@ main > section:nth-of-type(2) > ul > li > h3 {
     font-family: "integral";
     font-size: 1.2em;
     text-transform: uppercase;
-    color: var(--color-text);
+    color: var(--color-text1);
     z-index: 3;
-
 }
 
-/* kaart-button */
+/* kaartknop */
 main > section:nth-of-type(2) > ul > li > a {
     position: absolute;
     bottom: 2em;
     left: 1.9em;
     padding: 0.7em;
     border: 0.1em solid var(--color-border);
-    color: var(--color-text);
+    color: var(--color-text1);
     text-decoration: none;
     font-family: "Manifold";
     font-weight: 600;
@@ -373,13 +124,69 @@ main > section:nth-of-type(2) > ul > li > a:hover {
     color: var(--color-text2);
 }
 
-/* HULP NODIG (section 3) */
+main > section:nth-of-type(2) > ul > li > a:active {
+    transform: scale(0.95);
+}
+/* Bron: https://chrome.dev/carousel-configurator/ */
+/* Bron: https://developer.chrome.com/blog/carousels-with-css?hl=nl */ 
+/* En uitleg van Sanne https://codepen.io/shooft/pen/vEGQEbg*/
+/* SECTION 2 – DESKTOP scroll buttons */
+@media (min-width: 60em) {
+    main > section:nth-of-type(2) > ul {
+        scroll-behavior: smooth;
+        overscroll-behavior-x: contain;
+        anchor-name: --wellness-carousel;
+    }
+
+    main > section:nth-of-type(2) > ul::scroll-button(*) {
+        position: absolute;
+        position-anchor: --wellness-carousel;
+        position-area: block-end center;
+        appearance: none;
+        border: none;
+        background: transparent;
+        width: 2em;
+        aspect-ratio: 1;
+        border-radius: 999px;
+        color: var(--color-text);
+        cursor: pointer;
+        font-size: 1.6rem;
+    }
+
+    main > section:nth-of-type(2) > ul::scroll-button(right) {
+        content: "→";
+        translate: 8em 0;  
+    }
+  
+    main > section:nth-of-type(2) > ul::scroll-button(left) {
+        content: "←"; 
+        translate: -8em 0;  
+    }
+  
+    main > section:nth-of-type(2) > ul::scroll-button(*):hover {
+        background: var(--color-scroll-red);
+    }
+
+    main > section:nth-of-type(2) > ul::scroll-button(*):active {
+        transform: scale(0.95);
+    }
+  
+    main > section:nth-of-type(2) > ul::scroll-button(*):disabled {
+        cursor: default;
+        color: var(--color-muted);
+    }
+}
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-direction */
+/* =========================
+   MAIN – SECTION 3 (Hulp nodig)
+   ========================= */
 main > section:nth-of-type(3) {
     display: flex;
     flex-direction: column;
     text-align: left;
-	padding: 1em;
+    padding: 1em;
 }
+
 main > section:nth-of-type(3) > h2 {
     padding:0;
 }
@@ -390,18 +197,18 @@ main > section:nth-of-type(3) > img {
 }
 
 main > section:nth-of-type(3) > p {
-	font-size: 0.9em;
+    font-size: 0.9em;
 }
-
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/align-items */
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/justify-content */
 /* contact knop */
 main > section:nth-of-type(3) > a {
-    display: inline-flex;
+    display:flex;
     align-items: center;
     justify-content: center;
     padding: 0.8em 1.8em;
-	border: 0.1em solid var(--color-border);
+    border: 0.1em solid var(--color-text);
     background-color: var(--color-button);
-
     color: var(--color-text2);
     font-family: "Manifold";
     font-weight: 600;
@@ -413,50 +220,60 @@ main > section:nth-of-type(3) > a {
 
 main > section:nth-of-type(3) > a:hover {
     background: var(--color-bg);
-	border: 0.1em solid var(--color-border); 
     color: var(--color-text);
 }
+main > section:nth-of-type(3) > a:active {
+    transform: scale(0.95);
+}
 
-    /* FOTO RECHTS, over alle rijen */
-    main > section:nth-of-type(3) > img {
-        grid-column: 2;
-        grid-row: 1 / 3;
-        max-width: 95%;
+/* GRID POSITIES desktop */
+main > section:nth-of-type(3) > img {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    width: 95%;
+}
+
+main > section:nth-of-type(3) > p {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 1em;
+    line-height: 1.6;
+    width:95%
+}
+
+main > section:nth-of-type(3) > a {
+    grid-column: 1;
+    grid-row: 3;
+    width: 55%;
+}
+
+@media (min-width: 50em) {
+    main > section:nth-of-type(3) {
+        display: grid;                 
+        grid-template-columns: 1fr 1fr;                
+        padding: 2em;               
     }
 
-    /* TEKST LINKS ONDER H2 */
     main > section:nth-of-type(3) > p {
-        grid-column: 1;
-        grid-row: 2;
-        font-size: 0.8em;
-        line-height: 1.6;
-        width:80%
+       font-size: 1em;
+       width:80%
     }
+}
 
-    /* BUTTON LINKS ONDER TEKST */
-    main > section:nth-of-type(3) > a {
-        grid-column: 1;
-        grid-row: 3;
-        max-width: 55%;
+@media (min-width: 60em) {
+    main > section:nth-of-type(3) {
+        padding:8em;
     }
+}
 
-    @media (min-width: 50em) {
-        /* Section 3: tekst links, foto rechts */
-        main > section:nth-of-type(3) {
-            display: grid;                 
-            grid-template-columns: 1fr 1fr;                
-            padding: 2em;               
-        }
-
-        main > section:nth-of-type(3) > p {
-           font-size: 1em;
-        }
-    }
-
-
-/* SECTION 4  Let's get started */
+/* =========================
+   MAIN – SECTION 4 (Form)
+   ========================= */
 main > section:nth-of-type(4) {
     padding: 1em;
+    display: grid;
+    gap: 1em;
+    background-color:var(--color-background-pink);
 }
 
 main > section:nth-of-type(4) > h2 {
@@ -472,38 +289,49 @@ main > section:nth-of-type(4) > p {
     line-height: 1.6;
 }
 
-/* FORM GRID */
 main > section:nth-of-type(4) form {
     display: grid;
     gap: 1em;
 }
-
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-wrap */
+/* Uitleg van Sanne https://codepen.io/shooft/pen/vEGQEbg */
 /* labels */
 main > section:nth-of-type(4) form > label {
     display: flex;
-    flex-direction: column;
-    font-size: 1em;
-    line-height: 1.4;
+    flex-wrap: wrap;      
+    column-gap: 0.5em;    
 }
+
+/* required sterretje */
+label:has(input[required])::after {
+    content: "*";
+    color:var(--color-accent-red);
+}
+
+/* input na de tekst */
+label:has(input[required]) input {
+    order: 1;
+}
+
 /* Inputs */
 main > section:nth-of-type(4) form input[type="text"],
 main > section:nth-of-type(4) form input[type="email"],
 main > section:nth-of-type(4) form input[type="tel"] {
     width: 100%;
     padding: 1.3em;
-
     border: 1.5px solid var(--color-background-grey);
     border-radius: 0.5em;
-
     background: transparent;
     color: var(--color-text);
     font-family: "Manifold";
     font-size: 0.9em;
 }
 
-main section:nth-of-type(4) form input:focus {
-    border-color: var(--color-text);
-    outline: none;
+main > section:nth-of-type(4) form input[type="text"]:focus-visible,
+main > section:nth-of-type(4) form input[type="email"]:focus-visible,
+main > section:nth-of-type(4) form input[type="tel"]:focus-visible {
+    outline: 2px solid var(--color-accent-red);
+    outline-offset: 0.1em;
 }
 
 /* Checkbox label */
@@ -516,27 +344,31 @@ main > section:nth-of-type(4) form > label:last-of-type {
 }
 
 /* Checkbox */
-main > section:nth-of-type(4) form input[type="checkbox"] {
+main > section:nth-of-type(4) form >input[type="checkbox"] {
     width: 1.1em;
     height: 1.1em;
-    accent-color: var(--color-accent);
 }
 
 /* Button */
 main > section:nth-of-type(4) form > button {
-    padding: 1em 2em;
-    background: var(--color-accent);
-    color: var(--color-text);
+    background: var(--color-accent-red);
+    color: var(--color-text1);
     border: none;
     font-family: "Manifold";
     font-size: 0.9em;
     letter-spacing: 0.05em;
     cursor: pointer;
+    padding: 0.8em 2.5em;             
+    justify-self: start;  
 }
 
 main > section:nth-of-type(4) form > button:hover {
-	background: var(--color-text);
+    background: var(--color-text);
     color: var(--color-text2);
+}
+
+main > section:nth-of-type(4) form > button:active {
+    transform: scale(0.97);
 }
 
 @media (min-width: 35em) {
@@ -544,11 +376,17 @@ main > section:nth-of-type(4) form > button:hover {
         padding: 1em 5em 1em 1em;
     }
 
+    main > section:nth-of-type(4) form > button {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        padding: 1em 5em ; 
+    }
 }
 
 @media (min-width: 55em) {
     main > section:nth-of-type(4) {
-        padding: 1em 15em 1em 15em;
+        padding: 1em 20em 1em 20em;
     }
 
     main > section:nth-of-type(4) > h2 {
@@ -556,22 +394,30 @@ main > section:nth-of-type(4) form > button:hover {
     }
 
     main > section:nth-of-type(4) > p {
-        text-align: center;
+        text-align: left
     }
 
+    main > section:nth-of-type(4) form > button {
+      width:20%;
+    }
 }
 
-/* section 5 */
+/* =========================
+   MAIN – SECTION 5 (App download)
+   ========================= */
 main > section:nth-of-type(5) {
     display: grid;
     justify-content: center;
     align-items: center;
     padding: 1em;
+}
+
+main > section:nth-of-type(5) p{
     text-align: left;
 }
 
 main > section:nth-of-type(5)> h2{
-    padding:0em
+    padding:0em;
 }
 
 main > section:nth-of-type(5) > img {
@@ -588,140 +434,60 @@ main > section:nth-of-type(5) > a {
 main > section:nth-of-type(5) > a > img {
     width: 7em;
     height: auto;
+    transition: transform 0.15s ease;
 }
+
+main > section:nth-of-type(5) > a > img:hover {
+    transform: translateY(-0.15em);
+}
+
+main > section:nth-of-type(5) > a > img:active {
+    transform: scale(0.92);
+}
+
 @media (min-width: 54em) {
-main > section:nth-of-type(5){
-    padding:1em;
-}
-
-/* PLAATJE LINKS */
-main > section:nth-of-type(5) > img {
-    grid-row: 1 / 5;     
-    max-width: 100%;
-}
-
-/* TEKST RECHTS ONDER H2 */
-main > section:nth-of-type(5) > p {
-    line-height: 1.5;
-    font-size: 1em;
-    width: 28em;
-}
-
-/* BUTTONS RECHTS ONDER TEKST */
-main > section:nth-of-type(5) > a {
-    grid-column: 2;
-    grid-row: 3;
-}
-main > section:nth-of-type(5) > a > img {
-    max-width: 10em;
-    height: auto;
-}
-}
-
-@media (min-width: 70em) {
-    /* 2 kolommen op groter scherm */
     main > section:nth-of-type(5){
-        padding:10em;
+        padding:1em;
     }
-    
-    /* PLAATJE LINKS */
+
     main > section:nth-of-type(5) > img {
         grid-row: 1 / 5;     
         max-width: 100%;
     }
+
+    main > section:nth-of-type(5) > p {
+        line-height: 1.5;
+        font-size: 1em;
+        width: 28em;
+    }
+
+    main > section:nth-of-type(5) > a {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    main > section:nth-of-type(5) > a > img {
+        max-width: 10em;
+        height: auto;
+    }
+}
+
+@media (min-width: 70em) {
+    main > section:nth-of-type(5){
+        padding:9em;
+    }
     
-    /* TEKST RECHTS ONDER H2 */
+    main > section:nth-of-type(5) > img {   
+        max-width: 100%;
+    }
+    
     main > section:nth-of-type(5) > p {
         line-height: 1.5;
         font-size: 1em;
         width: 28em;
     }
     
-    /* BUTTONS RECHTS ONDER TEKST */
-    main > section:nth-of-type(5) > a {
-        grid-column: 2;
-        grid-row: 3;
-    }
     main > section:nth-of-type(5) > a > img {
         max-width: 10em;
-        height: auto;
     }
-    }
-
-/* FOOTER */
-footer {
-    background-color: var(--color-footer-bg);
-    color: var(--color-footer-text);
-}
-
-footer > img {
-    display: flex;
-    max-width: 100%;
-    padding: 7em 0em 4em 1em;
-}
-
-footer ul {
-    display: grid;
-    list-style: none;
-    padding: 0em 0em 1em 1em;
-    gap: 1.5em;
-}
-
-footer section:first-of-type ul a {
-    display: grid;
-    text-decoration: none;
-    font-family: "integral";
-    color: var(--color-footer-text);
-    font-size: 1em;
-}
-
-footer > a:first-of-type {
-    display: flex;
-    gap: 0.2em;
-    padding: 0 0 1em 1em;  
-    align-items: center;
-}
-
-footer section:nth-of-type(2) ul {
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: repeat(5, 2.5em);
-    gap: 1em;
-    align-items: center;
-}
-
-footer h4 {
-    font-family: "Manifold";
-    font-weight: 600;
-    font-size: 1.2em;
-    margin-bottom: 0; 
-}
-
-footer section ul a {
-    text-decoration: none;
-    color: var(--color-footer-text);
-    font-family: "Manifold";
-}
-
-footer section ul a:hover{
-	text-decoration: underline;
-}
-
-footer section:last-of-type ul {
-    font-family: "Manifold";
-    text-transform: uppercase;
-    font-size: 0.75em;
-    padding: 0 0 0 1em;
-    gap: 0.9em;
-	
-}
-
-footer section:last-of-type ul a {
-    color: var(--color-muted);
-}
-
-footer p {
-    color: var(--color-muted);
-    font-size: 0.75em;
-    padding: 1em 0em 4em 1em;
 }

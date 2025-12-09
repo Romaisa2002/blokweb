@@ -1,246 +1,49 @@
-@font-face {
-    font-family: "integral";
-    src: url("../fonts/integral-bold.woff2");
-}
+/* =========================
+   SECTION 1 MEMBERSHIPS 
+   ========================= */
 
-@font-face {
-    font-family: "Manifold";
-    src: url("../fonts/manifold-regular.woff2");
-    font-weight: 400;
-}
-@font-face {
-    font-family: "Manifold";
-    src: url("../fonts/manifold-demibold.woff2");
-    font-weight: 600;
-}
-@font-face {
-    font-family: "Manifold";
-    src: url("../fonts/manifold-bold.woff2");
-    font-weight: 700;
-}
-
-@font-face{
-    font-family:"timberwolf";
-    src: url("../fonts/timberwolf.woff2");
-    font-weight: 400;
-}
-
-/* BASIS */
-*, *::after, *::before {
-    box-sizing: border-box;
-}
-
-/* VARIABELEN */
-:root {
-	color-scheme: light dark;
-
-    --color-text: light-dark(#ffffff,#ffffff);
-    --color-text2: light-dark(#000000, #000000);
-    --color-bg: light-dark(#000000, #000000);
-    --color-button: light-dark(#ffffff,#ffffff);
-
-    --color-footer-bg: light-dark(#ffffff,#ffffff);
-    --color-footer-text: light-dark(#000000, #000000);
-    --color-background-grey:light-dark(#161616, #161616);
-
-    --color-accent: light-dark(#ff0140,#ff0140);
-    --color-muted: light-dark(#c6c5c5, #c6c5c5);
-    --color-border: light-dark(#ffffff,#ffffff);
-
-    --club-hover-border: light-dark(#ffffff);     
-}
-
-/* BODY */
-body {
-    font-family: "Manifold";
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    margin: 0;
-    padding: 0;
-}
-/* HEADER */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    background-color: var(--color-bg);
-    padding: 1.8em;
-    z-index: 10;
-    gap: 1em;
-}
-
-header img {
-    width: 8em;
-}
-
-header > a:first-of-type {
-    margin-right: auto;
-}
-
-header > a:nth-of-type(2) {
-    background: var(--color-accent);
-    color: var(--color-text);
-    text-decoration: none;
-    padding: 1em 1.4em;
-    font-size: .7em;
-    letter-spacing: .05em;
-}
-header > a:nth-of-type(2):hover {
-    background: var(--color-text);
-    color: var(--color-text2);
-}
-
-header > button {
-    background: none;
-    border: none;
-}
-
-header button img {
-    width: 3em;
-}
-
-header button img:hover{
-	cursor: pointer;
-}
-header button img :active{
-	transform: scale(0.9);
-}
-
-/* NAV MOBIEL */
-header nav {
-    display: flex;
-    flex-direction: column;
-    padding: 0.17em;
-    gap: 0.5em;
-
-    position: fixed;
-    inset: 0;
-    translate: 100% 0;
-    transition: .4s ease;
-    background: var(--color-bg);
-}
-
-header nav > img {
-    width: 10em;
-    padding: 1em 1em 0;
-}
-
-header nav.is-open {
-    translate: 0 0;
-}
-
-header nav > button {
-    position: absolute;
-    top: 1.7em;
-    right: 1.6em;
-    background: none;
-    border: none;
-}
-
-header nav > button img {
-    width: 2em;
-}
-
-header nav > select {
-    width: 5em;
-    background: transparent;
-    color: var(--color-text);
-    border: none;
-    padding: .6em;
-    font-family: "Manifold";
-    font-size: .9em;
-}
-
-header nav ul {
-    display: grid;
-    gap: 1em;
-    list-style: none;
-    font-family: "Manifold";
-    font-weight: 400;
-    font-size: 1.1em;
-    text-transform: uppercase;
-    padding: 0.8em;
-}
-
-header nav a {
-    text-decoration: none;
-    color: var(--color-text);
-}
-
-/* nav CTA-knoppen */
-header nav > ul:last-of-type > li:first-of-type > a {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    border: 0.1em solid var(--color-border);
-    height: 3em;
-    color: var(--color-text);
-    text-decoration: none;
-    font-family: "Manifold";
-    text-transform: uppercase;
-    font-size: 0.8em;
-    letter-spacing: 0.05em;
-}
-
-header nav > ul:last-of-type > li:nth-of-type(2) > a {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    height: 3em;
-    background: var(--color-accent);
-    color: var(--color-text);
-    text-decoration: none;
-    font-family: "Manifold";
-    text-transform: uppercase;
-    font-size: 0.8em;
-    letter-spacing: 0.05em;
-    
-}
-
-/* section 1*/
-
+   /* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-size */
+   /* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-position */
 main > section:first-of-type {
     position: relative;
     padding: 4em 1em 6em 1em;
-
     background-image:
-        linear-gradient(to bottom, rgba(30, 30, 30, 0.479), rgba(0, 0, 0, 0.937)),
-        url("/images/student-membership-trainmore-secondary-hero-mobile.webp"); /* gebruik jouw hero-afbeelding */
+        linear-gradient(to top,var(--gradient-top),var(--gradient-bottom)),
+        url("../images/student-membership-trainmore-secondary-hero-mobile.webp");
     background-size: cover;
     background-position: center;
     color: var(--color-text);
 }
-
-/* h1 op de foto */
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp */
+/* titel */
 main > section:first-of-type h1 {
-	color: var(--color-text);
-	font-family: "integral";
-    font-size: 2em;
+    color: var(--color-text1);
+    font-family: "integral";
+    font-size: clamp(2em, 5vw, 6em);
 }
 
-/* CTA-knoppen op de memberships */
-main > section:first-of-type ul {
-    position: absolute;
-    left: 0;
-    right: 0;
+/* tekst */
+main > section:first-of-type p {
+    font-size: clamp(0.9em, 1.2vw, 0.5em);
+    color: var(--color-text1);
+}
 
+/* knoppenlijst */
+main > section:first-of-type ul {
     display: flex;
     flex-direction: column;
     gap: 1em;
     list-style: none;
     margin: 0;
-    padding: 1em 1.5em 1em 1em; 
+    padding: 1em 0em 0em 0em; 
 }
 
-/* stijl van de knoppen */
+/* basisstijl knoppen */
 main > section:first-of-type ul li a {
     display:flex;
     align-items: center;
     justify-content: center;
     height: 3em;
-    color: var(--color-text);
     text-decoration: none;
     font-family: "Manifold";
     text-transform: uppercase;
@@ -250,57 +53,86 @@ main > section:first-of-type ul li a {
 
 /* JOIN NOW */
 main > section:first-of-type ul li:first-of-type a {
-    background: var(--color-accent);
-    color: var(--color-text);
+    background: var(--color-accent-red);
+    color: var(--color-text1);
 }
-
 main > section:first-of-type ul li:first-of-type a:hover{
-    background: var(--color-text);
-    color: var(--color-text2);
+    color: var(--color-text);
+    background: var(--color-text2);
+    border: 0.1em solid var(--color-border);
 }
 
-/* section 2 */
+main > section:first-of-type ul li:first-of-type a:active{
+    transform: scale(0.95);
+}
 
 /* FREE TRIAL */
 main > section:first-of-type ul li:nth-of-type(2) a {
     border: 0.1em solid var(--color-border);
-    color: var(--color-button);
-    border-color: var(--color-border);
+    color: var(--color-text1);
 }
 
 main > section:first-of-type ul li:nth-of-type(2) a:hover{
-    background: var(--color-text);
-    color: var(--color-text2);
+    background: var(--color-text2);
+    color: var(--color-text);
 }
 
-@media (min-width: 100em) {
-    header > button {
-        display: none;
+main > section:first-of-type ul li:nth-of-type(2) a:active{
+    transform: scale(0.95);
+}
+
+/* knoppenblok */
+@media (min-width: 34em) {
+    main > section:first-of-type ul li a {
+        width: 10em;      
+        padding: 1em;  
     }
 
-    header nav button {
-        display: none;
+    main > section:first-of-type ul {
+        flex-direction: row;    
+    }
+
+    main > section:first-of-type p {
+        width:40%;
+        font-size: clamp(1em, 1.2vw, 1.1em);
     }
 }
 
-/* Titel */
+/* =========================
+   SECTION 2 UITLEG TEKST
+   ========================= */
 main > section:nth-of-type(2) > h2 {
     font-family: "integral";
     text-transform: uppercase;
     letter-spacing: .06em;
     padding:2em 1em 0em 0.5em;
+    font-size: 1.5em;
+    text-align: center;
 }
 
-/* Paragraaf */
 main > section:nth-of-type(2) > p {
     font-family: "Manifold";
     font-size: 0.9em;
     line-height: 1.6em;
-    padding: 0em 0em 0em 1em;
+    padding: 0em 1em 0em 1em;
+    text-align: center;
 }
 
+@media (min-width: 30em) { 
+    main > section:nth-of-type(2) > h2 {
+        text-align: center;
+        font-size: clamp(2.3em, 1.2vw, 1.1em);
+    }
 
-/* MEMBERSHIP KAARTEN DERDE SECTION IN MAIN */
+    main > section:nth-of-type(2) > p {
+        text-align: center;
+        font-size: clamp(1em, 1.2vw, 1.1em);
+    }
+}
+
+/* =========================
+   SECTION 3 – MEMBERSHIP KAARTEN
+   ========================= */
 main > section:nth-of-type(3) {
     display: grid;
     grid-template-columns: 1fr;
@@ -308,67 +140,118 @@ main > section:nth-of-type(3) {
     padding: 2em 1em 2em;
 }
 
-/* algemene kaart-styling */
+/* losse kaart */
 main > section:nth-of-type(3) article {
-    background:var( --color-background-grey);
+    background:var(--color-background-grey);
     padding: 2em;
+    position: relative;    
+}
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/translateX */
+/* label / strong */
+main > section:nth-of-type(3) article strong {
+    position: absolute;
+    left: 50%;
+    bottom: 4.8em;    
+    transform: translateX(-50%);
+    font-family: "integral";
+    font-size: 0.60em;
+    text-transform: uppercase;
+    color: var(--color-text1);
 }
 
+/* streepje */
+main > section:nth-of-type(3) article > img{
+    width: 100%;     
+    height: 2em;    
+}
+
+/* titel */
 main > section:nth-of-type(3) article h3 {
     font-family: "integral";
     text-transform: uppercase;
     font-size: 1em;
     letter-spacing: 0.06em;
+    color: var(--color-text1);
 }
+
+/* tekst in kaart */
 main section:nth-of-type(3) article p{
     font-size: 0.7em;
+    color: var(--color-text1);
 }
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid-column */
+/* JOIN NOW onder kaarten */
 main > section:nth-of-type(3) > a {
-    display: flex;
-    justify-content: center;
+    grid-column: 1 / -1;    
+    justify-self: center;             
     text-align: center;
-    background: var(--color-accent);
-    color: var(--color-text);
-    padding:1.2em;
+    background: var(--color-accent-red);
+    color: var(--color-text1);
+    padding:1em 4em;
     text-decoration: none;
     font-size: 0.8em;
-
 }
+
 main > section:nth-of-type(3) > a:hover{
     background: var(--color-text);
     color: var(--color-text2);
 }
 
+main > section:nth-of-type(3) > a:active{
+    transform: scale(0.95);
+}
 
-@media (min-width: 34em) { 
+/* grid 2 kolommen (tablet) */
+@media (min-width: 30em) { 
     main > section:nth-of-type(3) {
-        grid-template-columns: repeat(2, minmax(0, 1fr)); 
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-/* 4 KAARTEN NAAST ELKAAR */
-@media (min-width: 60em) {  
+/* grid 4 kolommen (desktop) */
+@media (min-width: 55em) {  
     main > section:nth-of-type(3) {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 16rem));
+        justify-content: center;
+    }
+
+    main > section:nth-of-type(3) article {
+        padding: 2em;
     }
 }
 
-/* "Bereken je korting"  (4e section in main) */
+/* =========================
+   SECTION 4 – KORTING BLOK
+   ========================= */
 main > section:nth-of-type(4) {  
-    background: var(--color-background-grey);
-    scrollbar-width: auto;
-    scrollbar-color: #ff0000 #b4b4b4;
+    background: var(--color-background-pink);
+    scrollbar-color: var(--color-scroll-red) var(--color-scroll-white);
     padding: 2em 1em 3em; 
+    text-align: center;  
+    color: var(--color-text);
+    position: relative;
 }
 
-main > section:nth-of-type(4) ul {
-    list-style: none;
-    display: flex;
-    overflow-x: auto;
-    padding: 0;  
-    gap:5em;
-    scroll-snap-type: x mandatory;
+/* titel korting */
+main > section:nth-of-type(4) > h2 {
+    font-family: "integral";
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--color-text);
+    font-size: 2em;
 }
+
+/* horizontale lijst */
+main > section:nth-of-type(4) ul {
+    list-style: none; 
+    display: flex; 
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    padding: 0; 
+    gap:5em;
+}
+
+/* item */
 main > section:nth-of-type(4) li{
     text-align: center;
     width: 100%;
@@ -376,32 +259,30 @@ main > section:nth-of-type(4) li{
     scroll-snap-align: center;      
 }
 
-main > section:nth-of-type(4) > h2 {
-    font-family: "integral";
-    text-transform: uppercase;
-    letter-spacing: .06em;
-}
-
-main > section:nth-of-type(4) > p {
-    font-size: 0.9em;
-}
-
+/* nummer bovenaan */
 main > section:nth-of-type(4) ul li > strong {           
     font-family: "integral";  
     font-size: 3em;
 }
 
-/* De rij met ← 1 → */
+/* button variant  */
 main > section:nth-of-type(4) li > button {
     font-size: 2.5em;              
     color: var(--color-text);
     background: none;
     border: none;
-    
-}
-main > section:nth-of-type(4) li > button {
     cursor: pointer;
 }
+
+main > section:nth-of-type(4) li > button:hover {
+    color: var(--color-accent-red);
+}
+
+main > section:nth-of-type(4) li > button:active {
+    transform: scale(0.9);
+}
+
+/* titel per card */
 main > section:nth-of-type(4) li > h3 {
     font-size: 2em;
     font-family: "Manifold";
@@ -409,13 +290,16 @@ main > section:nth-of-type(4) li > h3 {
     text-transform: uppercase; 
 }
 
+/* groot kortingsbedrag */
 main > section:nth-of-type(4) li > p:first-of-type {
     font-size: 8em;
     font-family:"timberwolf";
     font-weight: 400;
     margin:0;
-    color: var(--color-accent);
+    color: var(--color-accent-red);
 }
+
+/* tekst onder bedrag */
 main > section:nth-of-type(4) li > p:nth-of-type(2) {
     font-size: 1.5em;
     font-family: "Manifold";
@@ -424,17 +308,16 @@ main > section:nth-of-type(4) li > p:nth-of-type(2) {
     color: var(--color-text);
 }
 
+/* CTA onder blok */
 main > section:nth-of-type(4) > a {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 3em;
-
     font-family: "Manifold";
     text-transform: uppercase;
     font-size: 0.8em;
     letter-spacing: 0.05em;
-
     text-decoration: none;
     border: 0.1em solid var(--color-border);
     color: var(--color-text);
@@ -444,168 +327,306 @@ main > section:nth-of-type(4) > a:hover {
     background: var(--color-text);
     color: var(--color-text2);
 }
-/* CLUBS / LOCATIES section 5 */
-main > section:nth-of-type(5) {
-    padding: 1em ;
+
+main > section:nth-of-type(4) > a:active {
+    transform: scale(0.97);
 }
 
-main > section:nth-of-type(5) > h2 {
+/* iets breder scherm */
+@media (min-width: 45em) { 
+    main > section:nth-of-type(4) > a {
+        display: inline-flex;   
+        align-items: center;
+        justify-content: center;
+        padding:1em 5em;
+    }
+}
+
+/* desktop layout korting */
+@media (min-width: 60em) {
+
+    main > section:nth-of-type(4) {
+        padding:3em;
+    }
+
+    main > section:nth-of-type(4) > article {
+      display: flex;
+      align-items: flex-start;             
+    }
+
+    main > section:nth-of-type(4) > h2 {
+        font-size: clamp(3em, 1.2vw, 1.1em);
+        text-align: left;
+    }
+
+    main > section:nth-of-type(4) > article > p {
+        font-size: clamp(1em, 1.2vw, 1.1em);
+        text-align: left;
+    }
+
+    main > section:nth-of-type(4) > article > h3 {
+        text-align: center;
+    }
+
+    main > section:nth-of-type(4) > article > ul {
+        display: flex;
+        overflow-x: auto;      
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        overscroll-behavior-x: contain;
+        anchor-name: --korting-carousel;
+    }
+
+    main > section:nth-of-type(4) > article > ul > li {      
+        scroll-snap-align: center;
+        width: 20em;
+    }
+
+    main > section:nth-of-type(4) > a {
+        display: flex;
+        justify-self: left;
+        position: absolute;
+        bottom: 23em;
+        padding:1.5em 3em;
+        border: 0.1em solid var(--color-border);
+        color: var(--color-text);
+    }
+
+    main > section:nth-of-type(4) > article > ul::scroll-button(*) {
+        position: absolute;
+        position-anchor: --korting-carousel;
+        position-area: block-end center;
+        appearance: none;
+        border: none;
+        background: transparent;
+        width: 2em;
+        aspect-ratio: 1;
+        border-radius: 999px;
+        color: var(--color-text);
+        cursor: pointer;
+        font-size: 1.6em;
+    }
+
+    main > section:nth-of-type(4) > article > ul::scroll-button(right) {
+        content: "→";
+        justify-self: flex-end;
+    }
+
+    main > section:nth-of-type(4) > article > ul::scroll-button(left) {
+        content: "←";
+        justify-self:flex-start;
+    }
+
+    main > section:nth-of-type(4) > article > ul::scroll-button(*):hover {
+        background: var(--color-scroll-red);
+    }
+
+    main > section:nth-of-type(4) > article > ul::scroll-button(*):active {
+        transform: scale(0.95);
+    }
+
+    main > section:nth-of-type(4) > article > ul::scroll-button(*):disabled {
+        cursor: default;
+        color: var(--color-muted);   
+    }
+}  
+
+/* =========================
+   SECTION 5 PILAT3S / CLUBS
+   ========================= */
+
+/* titel "Vind je rust" */
+main > section:nth-of-type(5) h2 {
     font-family: "integral";
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    font-size: 1.5em;
-}
-
-/* elke clubkaart */
-main > section:nth-of-type(5) article {
-    border-bottom: 0.08em solid rgba(161, 161, 161, 0.25);
-    padding: 0.5em;
-    display: grid;
-}
-
-main > section:nth-of-type(5) article:hover {
-    border-bottom-color: var(--club-hover-border);
-}
-
-/* RED/BLACK LABEL */
-main > section:nth-of-type(5) article p:first-of-type {
-    grid-column: 1;
-    grid-row: 1;
-    font-size: 0.6em;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--color-accent);
+    padding: 1em;
     margin: 0;
 }
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display */
+/* span rondom PILAT3S */
+main > section:nth-of-type(5) h2 span {
+    position: relative;
+    display: inline-block;
+}
 
-/* CLUBNAAM */
-main > section:nth-of-type(5) article h3 {
-    grid-column: 1;
-    grid-row: 2;
-    font-family: "integral";
+/* rode streep */
+main > section:nth-of-type(5) h2 span img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height:100%;
+    bottom: -0.4em;        
+    width: 100%;          
+    transform: rotate(-5deg);
+    z-index: -1;
+}
+
+/* link per club */
+main > section:nth-of-type(5) > a {
+    display: block;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+/* kaart per club */
+main > section:nth-of-type(5) > a > article {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 2em;
+    border-bottom: 0.08em solid var(--color-border-white);
+}
+
+main > section:nth-of-type(5) > a > article:hover {
+    border-bottom-color: var(--color-text); 
+    cursor: pointer;
+    transform: translateY(-0.15em);
+}
+
+main > section:nth-of-type(5) > a > article:active {
+    transform: scale(0.99);
+}
+
+/* label RED/BLACK label */
+main > section:nth-of-type(5) > a > article > p:first-of-type {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    margin: 0;
+    font-size: 0.7em;
     text-transform: uppercase;
-    font-size: 0.9em;
+    letter-spacing: 0.08em;
+    padding:0.5em 0.5em 0.5em 0em;
+    color: var(--color-accent-red);
 }
 
-/* ADRES */
-main > section:nth-of-type(5) article p:nth-of-type(2) {
+/* clubtitel */
+main > section:nth-of-type(5) > a > article > h3 {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    margin: 0;
+    font-family: "integral";
+    padding:0em 0.5em 0.5em 0em;
+}
+
+/* adres */
+main > section:nth-of-type(5) > a > article > p:nth-of-type(2) {
     grid-column: 1;
     grid-row: 3;
+    margin: 0;
     font-size: 0.8em;
-    margin:0;
 }
-
-/* 'Vanaf' */
-main > section:nth-of-type(5) article p:nth-of-type(3) {
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-wrap */
+/* prijsvak */
+main > section:nth-of-type(5) > a > article > div {
+    grid-column: 2;
+    grid-row: 3;
     display: flex;
-    justify-content: end;
-    grid-column: 2;
-    grid-row: 3;
-    font-size: 0.95em;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    column-gap: 1em;
+}
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-basis */
+/* "Vanaf" */
+main > section:nth-of-type(5) > a > article > div > p:first-of-type {
+    flex-basis: 100%;
+    text-align: right;
+    margin: 0;
+    font-size: 0.75em;
 }
 
-/* oude prijs (doorgestreept) */
-main > section:nth-of-type(5) article p:nth-of-type(4) {
-    grid-column: 2;
-    grid-row: 3;
+/* oude prijs */
+main > section:nth-of-type(5) > a > article > div > p:nth-of-type(2) {
     color: var(--color-muted);
+    text-decoration: line-through;
+    margin: 0;
+    padding:0.30em 0em 0em 0em;
 }
 
 /* nieuwe prijs */
-main > section:nth-of-type(5) article p:nth-of-type(5) {
-    grid-column: 2;
-    grid-row: 4;
-
+main > section:nth-of-type(5) > a > article > div > p:nth-of-type(3) {
     font-family: "integral";
-    font-size: 1.6em;
     margin: 0;
+    font-size: 1.4em;
 }
 
-/* pijl rechts */
-main > section:nth-of-type(5) article a {
+/* pijl rechts (mobiel) */
+main > section:nth-of-type(5) > a > article > svg {
     grid-column: 3;
-    grid-row: 4;
-    padding:0em 0em 0em 1em;
-    font-size: 1.6em;
-    text-decoration: none;
+    grid-row: 3;
+    width: 1em;
+    justify-self: end;
     align-self: center;
-    color: var(--color-button);
 }
 
-/* FOOTER */
-footer {
-    background-color: var(--color-footer-bg);
-    color: var(--color-footer-text);
+main > section:nth-of-type(5) > a > article > svg path {
+    stroke: var(--color-text);
 }
 
-footer > img {
-    display: flex;
-    max-width: 100%;
-    padding: 7em 0em 4em 1em;
+/* JOIN NOW label in kaart*/
+main > section:nth-of-type(5) > a > article > span {
+    display: none;
 }
 
-footer ul {
-    display: grid;
-    list-style: none;
-    padding: 0em 0em 1em 1em;
-    gap: 1.5em;
+/* SECTION 5 – grotere schermen */
+@media (min-width: 48em) {
+
+    main > section:nth-of-type(5) > a > article > svg {
+        display: none;
+    }
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display */
+
+    main > section:nth-of-type(5) > a > article > span {
+        display: block;
+        grid-column: 3;
+        grid-row: 1 / 4;
+        align-self: center;
+        justify-self: end;
+        background: var(--color-accent-red);
+        color: var(--color-text1);
+        padding: 1em 1.4em;
+        font-family: "Manifold";
+        font-size: 0.8em;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    main > section:nth-of-type(5) > a > article > span:hover {
+        background: var(--color-text);
+        color: var(--color-text2);
+        transform: translateY(-0.15em);
+    }
+
+    main > section:nth-of-type(5) > a > article > span:active {
+        transform: scale(0.95);
+    }
+
+    main > section:nth-of-type(5) > h2 {
+        font-size: clamp(1.6em, 3vw, 3.5em);
+    }
+
+    main > section:nth-of-type(5) article h3 {
+        font-size: clamp(1em, 1.8vw, 2em);
+    }
+
+    main > section:nth-of-type(5) article > p:nth-of-type(2) {
+        font-size: clamp(0.8em, 1.3vw, 1.1em);
+    }
+
+    main > section:nth-of-type(5) article div p:first-of-type {
+        font-size: clamp(0.75em, 1.2vw, 1em);
+    }
+    
+    main > section:nth-of-type(5) article div p:nth-of-type(2) {
+        font-size: clamp(0.9em, 1.4vw, 1.2em);
+        padding:0.2em 0em 0em 0em;
+    }
+
+    main > section:nth-of-type(5) article div p:nth-of-type(3) {
+        font-size: clamp(1.4em, 2.2vw, 2em);
+        font-family: "integral";
+    }
 }
 
-footer section:first-of-type ul a {
-    display: grid;
-    text-decoration: none;
-    font-family: "integral";
-    color: var(--color-footer-text);
-    font-size: 1em;
-}
-
-footer > a:first-of-type {
-    display: flex;
-    gap: 0.2em;
-    padding: 0 0 1em 1em;  
-    align-items: center;
-}
-
-footer section:nth-of-type(2) ul {
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: repeat(5, 2.5em);
-    gap: 1em;
-    align-items: center;
-}
-
-
-footer h4 {
-    font-family: "Manifold";
-    font-weight: 600;
-    font-size: 1.2em;
-    margin-bottom: 0; 
-}
-
-footer section ul a {
-    text-decoration: none;
-    color: var(--color-footer-text);
-    font-family: "Manifold";
-}
-footer section ul a:hover{
-	text-decoration: underline;
-}
-
-footer section:last-of-type ul {
-    font-family: "Manifold";
-    text-transform: uppercase;
-    font-size: 0.75em;
-    padding: 0 0 0 1em;
-    gap: 0.9em;
-	
-}
-
-footer section:last-of-type ul a {
-    color: var(--color-muted);
-}
-
-footer p {
-    color: var(--color-muted);
-    font-size: 0.75em;
-    padding: 1em 0em 4em 1em;
+@media (min-width: 56em) {
+    main > section:nth-of-type(5) {
+        padding:10em;
+    }
 }
