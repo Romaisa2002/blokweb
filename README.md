@@ -294,15 +294,15 @@ Verder het gebruiken van Article snapte ik nog niet zo heel goed maar dat komt v
   Wat ik nog moest verbeteren is de Alt een beter naam geven bij de afbeeldingen. Wat niet in de Trainmore website zit maar wat ik wel ga doen is een skip link heading maken. Verder wat ik nog moet verbeteren is een aria label overal aan teovoegen dat het niet alleen 'ontdek meer' voorleest. 
   
   Toegankelijkheidstest deel 1 en 2
-  <img src="readme-images/Bladzijde 1.png" width="375px" alt="Toegankelijkheidstest bladzijde 1">
+  <img src="readme-images/bladzijde 1.png" width="375px" alt="bladzijde 1">
   
-  <img src="readme-images/Bladzijde 2.png" width="375px" alt="Toegankelijkheidstest bladzijde 2">
+  <img src="readme-images/bladzijde 2.png" width="375px" alt="bladzijde 2">
   
-  <img src="readme-images/Bladzijde 3.png" width="375px" alt="Toegankelijkheidstest bladzijde 3">
+  <img src="readme-images/bladzijde 3.png" width="375px" alt="bladzijde 3">
   
-  <img src="readme-images/Bladzijde 4.png" width="375px" alt="Toegankelijkheidstest bladzijde 4">
+  <img src="readme-images/bladzijde 4.png" width="375px" alt="bladzijde 4">
   
-  <img src="readme-images/Bladzijde 5.png" width="375px" alt="Toegankelijkheidstest bladzijde 5">
+  <img src="readme-images/bladzijde 5.png" width="375px" alt=bladzijde 5">
 
 </details>
 
