@@ -1,6 +1,6 @@
 // JavaScript Document
 
-// in de klas de opdracht gemaakt 
+// in de klas de opdracht gemaakt en uitleg verloofde 
 // https://codepen.io/Romaisa-Zaman/pen/jEqLoMj
 console.log("hi");
 

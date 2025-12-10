@@ -291,12 +291,20 @@ Verder het gebruiken van Article snapte ik nog niet zo heel goed maar dat komt v
 
   Wat wel goed ging is dat ik wel een H1 heb en de Trainmore pagina heeft dat niet. Ik had minder errors bij de validatie test dan de echte Trainmore Website. Ook heb ik de button element echt voor buttons gebruikt en niet waar een a hoort 
 
-  Wat ik nog moest verbeteren is de Alt een beter naam geven bij de afbeeldingen. Wat niet in de Trainmore website zit maar wat ik wel ga doen is een skip heading maken. Verder wat ik nog moet verbeteren is een aria label overal aan teovoegen dat het niet alleen 'ontdek meer' voorleest. 
+  Wat ik nog moest verbeteren is de Alt een beter naam geven bij de afbeeldingen. Wat niet in de Trainmore website zit maar wat ik wel ga doen is een skip link heading maken. Verder wat ik nog moet verbeteren is een aria label overal aan teovoegen dat het niet alleen 'ontdek meer' voorleest. 
   
+  Toegankelijkheidstest deel 1 en 2
+  <img src="readme-images/Bladzijde 1.png" width="375px" alt="Toegankelijkheidstest bladzijde 1">
+  
+  <img src="readme-images/Bladzijde 2.png" width="375px" alt="Toegankelijkheidstest bladzijde 2">
+  
+  <img src="readme-images/Bladzijde 3.png" width="375px" alt="Toegankelijkheidstest bladzijde 3">
+  
+  <img src="readme-images/Bladzijde 4.png" width="375px" alt="Toegankelijkheidstest bladzijde 4">
+  
+  <img src="readme-images/Bladzijde 5.png" width="375px" alt="Toegankelijkheidstest bladzijde 5">
 
 </details>
-
-
 
 ## Voortgang 3 (week 4)
 
@@ -329,8 +337,6 @@ Verder het gebruiken van Article snapte ik nog niet zo heel goed maar dat komt v
   2. tekst op de svg maken
   3. Knoppen maken met css 
 
-
-
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
@@ -338,9 +344,7 @@ Verder het gebruiken van Article snapte ik nog niet zo heel goed maar dat komt v
   - ik heb geleerd hoe je knoppen maakt met css. 
   - De meeting ging heel goed doordat ik uitleg kreeg van Sanne. 
 
-
 </details>
-
 
 
 ## Eindgesprek (week 5)
@@ -349,23 +353,31 @@ Verder het gebruiken van Article snapte ik nog niet zo heel goed maar dat komt v
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/Trainmore-faciliteiten-pagina 1.png" width="375px" alt="uitomst pagina 1">
+
+   <img src="readme-images/ Trainmore-memberships-pagina 2.png" width="375px" alt="uitomst pagina 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Wat ik heb geleerd en goed ging is een carousal maken. Ik snap nu hoe je dat moet doen. Eerst begreep ik er helemaal niks van maar naarmate ik code ging schrijven met behulp van bronnen begon ik het te begrijpen. 
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/carousal bereken je korting.png" width="375px" alt="top">
+
+  Wat ik hiet heb geleerd is een formulier maken. Ik kon het eerst niet maar door uitleg van Sanne is het mij toch gelukt om dit te maken. 
+
+  <img src="readme-images/form en label.png" width="375px" alt="ging goed">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Ik vond dit heel lastig om te maken omdat je heel specifiek bepaalde dingen moest plaatsen zoals de prijs op specifieke plekken. 
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/Vind je rust in pilates.png" width="375px" alt="bummer">
+
+  Ook vond ik de knoppen met css maken heel lastig. Omdat je meestal knoppen maakt in javascript vond ik het lastig om dat alleen met css te doen. 
+
+  <img src="readme-images/Knoppen in carousal.png" width="375px" alt="Moeilijk">
+
 </details>
-
-
-
 
 
 ## Bronnenlijst
