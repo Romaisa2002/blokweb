@@ -24,7 +24,7 @@ main > section:first-of-type h1 {
 
 /* tekst */
 main > section:first-of-type p {
-    font-size: clamp(0.9em, 1.2vw, 0.5em);
+    font-size: clamp(0.9em, 1.2vw, 1.1em)    ;
     color: var(--color-text1);
 }
 
@@ -93,11 +93,17 @@ main > section:first-of-type ul li:nth-of-type(2) a:active{
     }
 
     main > section:first-of-type p {
-        width:40%;
+        width:80%;
         font-size: clamp(1em, 1.2vw, 1.1em);
     }
 }
 
+@media (min-width: 55em) {
+    main > section:first-of-type p {
+        width:50%;
+        font-size: clamp(1em, 1.2vw, 1.1em);
+    }
+}
 /* =========================
    SECTION 2 UITLEG TEKST
    ========================= */
@@ -121,7 +127,7 @@ main > section:nth-of-type(2) > p {
 @media (min-width: 30em) { 
     main > section:nth-of-type(2) > h2 {
         text-align: center;
-        font-size: clamp(2.3em, 1.2vw, 1.1em);
+        font-size: clamp(2.3em, 1.2vw, 2.3em);
     }
 
     main > section:nth-of-type(2) > p {
@@ -204,14 +210,14 @@ main > section:nth-of-type(3) > a:active{
 /* grid 2 kolommen (tablet) */
 @media (min-width: 30em) { 
     main > section:nth-of-type(3) {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 /* grid 4 kolommen (desktop) */
 @media (min-width: 55em) {  
     main > section:nth-of-type(3) {
-        grid-template-columns: repeat(4, minmax(0, 16rem));
+        grid-template-columns: 16rem 16rem 16rem 16rem;
         justify-content: center;
     }
 

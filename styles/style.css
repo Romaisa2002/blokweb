@@ -48,7 +48,6 @@
    CSS VARIABELEN – kleuren + thema
    ========================= */
 /* uitgelegd door Sanne en August onze klasgenoot */
-
 /* root: kleurvariabelen voor light/dark thema */
 :root {
     color-scheme: light dark;
@@ -171,7 +170,6 @@ header > a:nth-of-type(2):active {
 header > button {
     background: none;
     border: none;
-    order: 2;
     color: var(--color-text);
 }
 
@@ -182,7 +180,7 @@ header button svg {
 }
 
 /* hover op hamburger icoon */
-header button svg :hover {
+header button svg:hover {
     cursor: pointer;
 }
 
@@ -210,7 +208,7 @@ header nav {
     background-color: var(--color-background-pink);
 }
 
-/* logo in nav paneel */
+/* logo in nav */
 header nav > svg {
     width:10em;
     padding: 2em 1em 0em 1em;
@@ -239,6 +237,7 @@ header nav > button svg path {
 
 /* Bron: oefeningen in de klas https://codepen.io/Romaisa-Zaman/pen/ByKJjXd */
 /* Bron: relative https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position */
+
 /* hoofdlinks in nav (eerste lijst) */
 header nav ul:first-of-type > li > a {
     position: relative;
@@ -247,6 +246,7 @@ header nav ul:first-of-type > li > a {
 /* Content uitleg van Sanne */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position */
 /* https://codepen.io/Romaisa-Zaman/pen/ByKJjXd */
+
 /* rood streepje onder nav-link */
 header nav ul:first-of-type > li > a::after {
     content: "";
@@ -409,11 +409,11 @@ header nav > ul:last-of-type > li:nth-of-type(2) > a:active {
 
     /* nav in header (geen overlay) */
     header nav {
-        position: static;
-        translate: 0 0;
         display: flex;
-        align-items: center;  
+        position: static;
         flex-direction: row;
+        translate: 0 0;
+        align-items: center;  
     }
     
     /* nav lijsten naast elkaar */
@@ -493,7 +493,6 @@ footer {
 
 /* logo bovenin footer */
 footer > img {
-    display: flex;
     max-width: 100%;
     padding: 7em 0em 4em 1em;
 }
@@ -511,7 +510,6 @@ footer ul {
 
 /* eerste footer kolom met hoofdlinks */
 footer section:first-of-type ul a {
-    display: grid;
     text-decoration: none;
     font-family: "integral";
     color: var(--color-footer-text);
@@ -545,7 +543,7 @@ footer > a:first-of-type img:active {
 /* social icons lijst */
 footer section:nth-of-type(2) ul {
     display: grid;
-    grid-template-columns: repeat(5, 2.5em);
+    grid-template-columns: 2.5em 2.5em 2.5em 2.5em 2.5em;
     gap: 1em;
     align-items: center;
 }
@@ -566,7 +564,7 @@ footer section:nth-of-type(2) ul > li a:active img {
 }
 
 /* titels in footer-kolommen (Clubs / Meer info / Support) */
-footer h4 {
+footer h3 {
     font-family: "Manifold";
     font-weight: 600;
     font-size: 1.2em;
@@ -619,7 +617,7 @@ footer > section:nth-of-type(3) {
 
     /* clubs/info/support in 2 kolommen */
     footer > section:nth-of-type(3) {
-        grid-template-columns: repeat(2, auto); 
+        grid-template-columns: repeat(2, 1fr);
     }
     
     /* hoofdlinks onder logo */
@@ -631,8 +629,11 @@ footer > section:nth-of-type(3) {
     /* eerste sectie (Memberships etc.) */
     footer > section:nth-of-type(1) {
         font-size: 1.5em;
-        grid-column: 1; 
-        grid-row: 2;     
+
+    }
+    /* copyrightblok positie */
+    footer > p {
+        font-size: 0.9em;
     }
 }
 
@@ -642,8 +643,8 @@ footer > section:nth-of-type(3) {
     /* complete footer als 4 koloms grid */
     footer {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        padding: 1em 0em 0em 4em;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 1em 0em 0em 3em;
     }
 
     /* logo over volledige breedte bovenin */
@@ -651,18 +652,18 @@ footer > section:nth-of-type(3) {
         grid-column: 1 / -1;
     }
 
-    /* eerste sectie links in kolom 1 */
+    /* eerste sectie links in kolom 1 memberships etc */
     footer > section:nth-of-type(1) {
-        font-size: 1.5em;
-        grid-column: 1/1;  
+        grid-column: 1; 
+        grid-row: 2; 
+        padding:0em 0em 10em 0em;
     }
 
     /* blok met clubs/info/support in 3 kolommen */
     footer > section:nth-of-type(3) {
         display: grid;
-        grid-column: 2 / 6;         
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        padding:0em 0em 0em 3em;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column: 2 / 5;         
     }
 
     /* appstore knoppen onder eerste kolom */
@@ -675,7 +676,16 @@ footer > section:nth-of-type(3) {
     footer > section:nth-of-type(2) {
         grid-column: 1;
         grid-row: 3;
-        justify-self: center;
+        justify-self: left;
+    }
+
+    /* copyrightblok positie */
+    footer > p {
+        grid-column: 1;
+        grid-row: 5;
+        justify-self: flex-start;
+        padding: 0em;
+        font-size: 0.9em;
     }
 
     /* juridische links over volle breedte (apart blok) */
@@ -683,41 +693,13 @@ footer > section:nth-of-type(3) {
         grid-column: 1 / -1;
         grid-row: 5;
     }
-
-    /* copyrightblok positie */
-    footer > p {
-        grid-column: 1 / -1;
-        grid-row: 6;
-    }
-
+    
     /* juridische links naast elkaar in één rij */
     footer > section:last-of-type ul {
         display: flex;
         flex-direction: row;
-        gap: 2rem;              
-        padding:0em 1em 0em 0em;   
-    }
-
-    /* juridische links rechts in grid */
-    footer > section:last-of-type {
-        grid-column: 3 / 5;      
-        grid-row: 5;
-        align-self: center;
         justify-self: flex-end;
-        padding: 0;
-    }
-
-    /* social icons blijven links */
-    footer > section:nth-of-type(2) {
-        grid-column: 1;
-    }
-
-    /* copyrighttekst links onderaan */
-    footer > p { 
-        grid-row: 5;
-        align-self: center;
-        justify-self: flex-start;
-        padding: 0em;
-        font-size: 0.9em;
+        gap: 2rem;              
+        padding:2em;   
     }
 }
